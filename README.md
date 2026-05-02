@@ -1,11 +1,25 @@
 # Portfolio Career Quiz
 
-This repository contains a React JSX component for a portfolio-themed career quiz.
+This repository contains a React quiz app for identifying portfolio career types.
 
-## File
+## Project Structure
 
-- `portfolio_career_quiz.jsx` - quiz component source code
+- `portfolio_career_quiz.jsx` - main quiz component
+- `src/main.jsx` - React app entry point
+- `index.html` - HTML shell used by Vite
+- `package.json` - scripts and dependencies
 
-## Usage
+## Local Development
 
-Import the component into your React app and render it where you want the quiz experience to appear.
+```bash
+npm install
+npm run dev
+```
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Vercel can deploy this as a standard Vite app.
