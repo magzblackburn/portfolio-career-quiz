@@ -315,57 +315,6 @@ const CREAM_MUTED = "#ffffff"; // softer body copy
 const BAND   = "#cdd492"; // tertiary — ornamental border bands
 
 // ─── Ornamental border band (top & bottom) ───────────────────────────────────
-function BorderBand({ position }) {
-  return (
-    <div
-      style={{
-        position: "fixed",
-        left: 0,
-        right: 0,
-        [position]: 0,
-        height: "46px",
-        zIndex: 2,
-        pointerEvents: "none",
-        background: `repeating-linear-gradient(90deg, transparent 0, transparent 0)`,
-      }}
-    >
-      <svg width="100%" height="46" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="ornament" width="56" height="46" patternUnits="userSpaceOnUse">
-            <rect width="56" height="46" fill={BG} />
-            <g stroke={BAND} strokeWidth="1.4" fill="none" opacity="0.85">
-              <circle cx="28" cy="23" r="9" />
-              <path d="M28 5 Q37 14 28 23 Q19 14 28 5 Z" />
-              <path d="M28 41 Q37 32 28 23 Q19 32 28 41 Z" />
-              <path d="M5 23 Q16 32 28 23 Q16 14 5 23 Z" />
-              <path d="M51 23 Q40 32 28 23 Q40 14 51 23 Z" />
-              <circle cx="0" cy="23" r="3.5" />
-              <circle cx="56" cy="23" r="3.5" />
-            </g>
-          </pattern>
-        </defs>
-        <rect width="100%" height="46" fill="url(#ornament)" />
-      </svg>
-    </div>
-  );
-}
-
-// ─── Circular medallion ───────────────────────────────────────────────────────
-function Medallion() {
-  return (
-    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginBottom: "32px" }}>
-      <circle cx="28" cy="28" r="27" fill={COPPER} opacity="0.92" />
-      <circle cx="28" cy="28" r="27" stroke={GOLD} strokeWidth="1" fill="none" />
-      <g stroke={CREAM} strokeWidth="1.3" fill="none" opacity="0.9">
-        <path d="M28 13 Q35 21 28 28 Q21 21 28 13 Z" />
-        <path d="M28 43 Q35 35 28 28 Q21 35 28 43 Z" />
-        <path d="M13 28 Q21 35 28 28 Q21 21 13 28 Z" />
-        <path d="M43 28 Q35 35 28 28 Q35 21 43 28 Z" />
-        <circle cx="28" cy="28" r="3" />
-      </g>
-    </svg>
-  );
-}
 
 // ─── Simple line icons per archetype ──────────────────────────────────────────
 function TypeIcon({ id, color, size = 26 }) {
