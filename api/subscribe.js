@@ -64,10 +64,10 @@ export default async function handler(req, res) {
         "Submitted At": new Date().toISOString(),
       };
 
-      // Add each question/answer as its own column
+      // Add each answer as Q1, Q2, etc.
       if (Array.isArray(responses)) {
-        responses.forEach(({ question, answer }) => {
-          fields[question] = answer;
+        responses.forEach(({ answer }, i) => {
+          fields[`Q${i + 1}`] = answer;
         });
       }
 
