@@ -46,6 +46,7 @@ export default async function handler(req, res) {
               { name: "archetype", value: archetype },
               { name: "secondary_archetype", value: secondaryArchetype ?? "" },
               { name: "Primary_Challenge", value: Array.isArray(responses) && responses[9] ? responses[9].answer : "" },
+              { name: "FirstName", value: firstName.trim() },
             ],
           }),
         }
