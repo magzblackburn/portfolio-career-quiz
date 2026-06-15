@@ -1231,7 +1231,7 @@ function Result({ result, firstName, onRetake }) {
           }}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          onClick={() => window.open("https://calendly.com/maggieblackburn/free-career-strategy-call", "_blank")}
+          onClick={() => window.open("https://calendly.com/maggieblackburn/free-career-strategy-call", "_blank", "noopener,noreferrer")}
         >
           Book a Free Career Strategy Call →
         </button>
