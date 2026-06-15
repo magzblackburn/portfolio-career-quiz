@@ -141,7 +141,7 @@ const QUESTIONS = [
     id: 1,
     q: "What does your ideal Monday morning look like?",
     answers: [
-      { text: "I know exactly what I'm doing: there's a clear structure and I can settle in.", types: ["STABILIZER", "STABILIZER"] },
+      { text: "I know exactly what I'm doing: there's a clear structure and I can settle in.", types: ["STABILIZER", "EXPERT"] },
       { text: "I'm deep in a project for someone who really needs what I know.", types: ["EXPERT", "FREEAGENT"] },
       { text: "I'm creating: writing, filming, designing something for an audience.", types: ["EDUCATOR", "CONNECTOR"] },
       { text: "I'm in the middle of conversations, connections, or community energy.", types: ["CONNECTOR", "EDUCATOR"] },
@@ -152,7 +152,7 @@ const QUESTIONS = [
     id: 2,
     q: "How do you feel about income unpredictability?",
     answers: [
-      { text: "I need a stable baseline. Variable income keeps me anxious.", types: ["STABILIZER", "STABILIZER"] },
+      { text: "I need a stable baseline. Variable income keeps me anxious.", types: ["STABILIZER", "EXPERT"] },
       { text: "I'm okay with variation if I have a clear pipeline of clients.", types: ["EXPERT", "CONNECTOR"] },
       { text: "I want income that doesn't always require me to show up.", types: ["EDUCATOR", "FREEAGENT"] },
       { text: "Honestly, I'd rather trade predictability for freedom.", types: ["FREEAGENT", "CONNECTOR"] },
@@ -182,10 +182,10 @@ const QUESTIONS = [
     id: 5,
     q: "When you imagine your working life 2 years from now, what stands out most?",
     answers: [
-      { text: "I've built a real income stream alongside my job that gives me options.", types: ["STABILIZER", "STABILIZER"] },
+      { text: "I've built a real income stream alongside my job that gives me options.", types: ["STABILIZER", "EXPERT"] },
       { text: "I've built something with an audience. People follow what I create.", types: ["EDUCATOR", "STABILIZER"] },
       { text: "I'm the person people refer to when they have a specific problem to solve.", types: ["EXPERT", "FREEAGENT"] },
-      { text: "I've built a community people would be devastated to lose access to.", types: ["CONNECTOR"] },
+      { text: "I've built a community people would be devastated to lose access to.", types: ["CONNECTOR", "EDUCATOR"] },
       { text: "I have income coming in from multiple directions, and my calendar is mine.", types: ["FREEAGENT", "EDUCATOR"] },
     ],
   },
@@ -193,7 +193,7 @@ const QUESTIONS = [
     id: 6,
     q: "How do you feel about selling your services?",
     answers: [
-      { text: "I prefer content or community to do the heavy lifting. Inbound all the way.", types: ["EDUCATOR", "CONNECTOR"] },
+      { text: "I prefer content or community to do the heavy lifting. Inbound all the way.", types: ["CONNECTOR", "EDUCATOR"] },
       { text: "I like 1:1 conversations. Selling feels honest when I know I can help.", types: ["EXPERT", "STABILIZER"] },
       { text: "I want systems and products that sell so I don't have to pitch constantly.", types: ["STABILIZER", "FREEAGENT"] },
       { text: "I like short outreach bursts when I have space, not ongoing sales.", types: ["FREEAGENT", "CONNECTOR"] },
@@ -203,7 +203,7 @@ const QUESTIONS = [
     id: 7,
     q: "Complete the sentence: 'The thing I want most from my work is...'",
     answers: [
-      { text: "...to prove I can earn outside of my job before I make any big moves.", types: ["STABILIZER", "STABILIZER"] },
+      { text: "...to prove I can earn outside of my job before I make any big moves.", types: ["STABILIZER", "EXPERT"] },
       { text: "...security AND self-expression. Both. Not one or the other.", types: ["STABILIZER", "EXPERT"] },
       { text: "...to be recognized as the go-to person in my space.", types: ["EXPERT", "EDUCATOR"] },
       { text: "...to reach a lot of people without trading more hours for it.", types: ["EDUCATOR", "FREEAGENT"] },
@@ -215,18 +215,18 @@ const QUESTIONS = [
     id: 8,
     q: "Where are you right now?",
     answers: [
-      { text: "Employed full-time and curious about what else is possible.", types: ["STABILIZER", "STABILIZER"] },
+      { text: "Employed full-time and curious about what else is possible.", types: ["STABILIZER", "CONNECTOR"] },
       { text: "Employed, but creatively restless. I need an outlet.", types: ["STABILIZER", "EDUCATOR"] },
       { text: "Already freelancing or consulting, and I want more stability and leverage.", types: ["EXPERT", "FREEAGENT"] },
       { text: "Self-employed and trying to scale beyond trading hours for money.", types: ["EDUCATOR", "FREEAGENT"] },
-      { text: "Between things, rethinking how I want to work entirely.", types: ["CONNECTOR", "FREEAGENT"] },
+      { text: "Between things, rethinking how I want to work entirely.", types: ["FREEAGENT", "CONNECTOR"] },
     ],
   },
   {
     id: 9,
     q: "What drains you fastest at work?",
     answers: [
-      { text: "Uncertainty about whether the money is actually coming in.", types: ["STABILIZER", "STABILIZER"] },
+      { text: "Uncertainty about whether the money is actually coming in.", types: ["STABILIZER", "EXPERT"] },
       { text: "Shallow, transactional work with no real depth.", types: ["EXPERT", "EDUCATOR"] },
       { text: "Doing the same thing for the same client, month after month.", types: ["FREEAGENT", "CONNECTOR"] },
       { text: "Working alone, with no people energy around me.", types: ["CONNECTOR", "EDUCATOR"] },
