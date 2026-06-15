@@ -1039,11 +1039,27 @@ function Result({ result, firstName, onRetake }) {
   const t = TYPES[result.primary];
   const s = TYPES[result.secondary];
   const [hover, setHover] = useState(false);
+  const [pdfLoading, setPdfLoading] = useState(false);
   const name = (firstName || "").trim();
   const greeting = name ? `${name}, here's the thing about ${t.label}s.` : `Here's the thing about ${t.label}s.`;
 
+  async function handleDownloadPDF() {
+    setPdfLoading(true);
+    const html2pdf = (await import("html2pdf.js")).default;
+    const element = document.getElementById("result-pdf-content");
+    await html2pdf().set({
+      margin: [12, 12, 12, 12],
+      filename: `${t.label.replace(/\s+/g, "-").toLowerCase()}-portfolio-career-results.pdf`,
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    }).from(element).save();
+    setPdfLoading(false);
+  }
+
   return (
     <div style={S.card}>
+      <div id="result-pdf-content">
       <div style={{ marginBottom: "14px" }}><TypeIcon id={t.id} color={t.color} size={48} /></div>
       <div style={S.resultType(t.color)}>Your Portfolio Career Type</div>
       <h2 style={S.resultTitle}>{t.label}</h2>
@@ -1179,6 +1195,29 @@ function Result({ result, firstName, onRetake }) {
       )}
 
       <div style={{ ...S.divider(t.color), marginBottom: "28px" }} />
+
+      </div>{/* end result-pdf-content */}
+
+      <div style={{ textAlign: "center", marginBottom: "24px" }}>
+        <button
+          onClick={handleDownloadPDF}
+          disabled={pdfLoading}
+          style={{
+            background: "transparent",
+            border: `1.5px solid ${t.color}`,
+            borderRadius: "100px",
+            padding: "11px 28px",
+            fontFamily: SANS,
+            fontSize: "13px",
+            fontWeight: 500,
+            color: t.color,
+            cursor: pdfLoading ? "wait" : "pointer",
+            letterSpacing: "0.05em",
+          }}
+        >
+          {pdfLoading ? "Generating PDF…" : "↓ Download your results as PDF"}
+        </button>
+      </div>
 
       <div style={S.ctaWrap}>
         <p style={{ ...SERIF_STYLE, fontSize: "22px", fontWeight: 400, color: TEXT, marginBottom: "18px", lineHeight: 1.4 }}>
