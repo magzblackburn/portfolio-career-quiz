@@ -1009,7 +1009,7 @@ function Gate({ typeKey, result, answers, onReveal }) {
   );
 }
 
-function Result({ result, firstName, onRetake }) {
+function Result({ result, firstName, onRetake, onExplore }) {
   const t = TYPES[result.primary];
   const s = TYPES[result.secondary];
   const [hover, setHover] = useState(false);
@@ -1213,7 +1213,75 @@ function Result({ result, firstName, onRetake }) {
         <button style={{ ...S.ghost, display: "block", margin: "0 auto" }} onClick={onRetake}>
           Retake the quiz
         </button>
+        <button
+          style={{ ...S.ghost, display: "block", margin: "12px auto 0", opacity: 0.7 }}
+          onClick={onExplore}
+        >
+          Explore all five archetypes →
+        </button>
       </div>
+    </div>
+  );
+}
+
+// ─── Explore screen ───────────────────────────────────────────────────────────
+function Explore({ result, onBack }) {
+  return (
+    <div style={{ ...S.card, maxWidth: "720px" }}>
+      <button
+        onClick={onBack}
+        style={{ background: "none", border: "none", cursor: "pointer", fontFamily: SANS, fontSize: "13px", color: TEXT, opacity: 0.6, padding: 0, marginBottom: "32px", display: "block" }}
+      >
+        ← Back to your results
+      </button>
+
+      <p style={{ ...SERIF_STYLE, fontSize: "clamp(28px, 5vw, 40px)", fontWeight: 400, color: TEXT, marginBottom: "8px", lineHeight: 1.1 }}>
+        The Five Archetypes
+      </p>
+      <p style={{ fontFamily: SANS, fontSize: "15px", color: TEXT, opacity: 0.6, fontWeight: 300, marginBottom: "40px", lineHeight: 1.6 }}>
+        Your primary is <strong style={{ fontWeight: 600, opacity: 1 }}>{TYPES[result.primary].label}</strong> and your secondary is <strong style={{ fontWeight: 600, opacity: 1 }}>{TYPES[result.secondary].label}</strong>. Here's how all five compare.
+      </p>
+
+      {Object.values(TYPES).map((t) => {
+        const isPrimary = t.id === result.primary;
+        const isSecondary = t.id === result.secondary;
+        return (
+          <div key={t.id} style={{
+            border: `1.5px solid ${isPrimary ? t.color : isSecondary ? t.color + "88" : "#e8e0d8"}`,
+            borderRadius: "10px",
+            padding: "28px 28px 24px",
+            marginBottom: "16px",
+            background: isPrimary ? t.color + "08" : "transparent",
+          }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "6px" }}>
+              <TypeIcon id={t.id} color={t.color} size={22} />
+              <span style={{ ...SERIF_STYLE, fontSize: "22px", fontWeight: 400, color: TEXT }}>{t.label}</span>
+              {isPrimary && (
+                <span style={{ fontFamily: SANS, fontSize: "10px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", background: t.color, color: "#fff", borderRadius: "100px", padding: "3px 10px", marginLeft: "4px" }}>
+                  Your primary
+                </span>
+              )}
+              {isSecondary && (
+                <span style={{ fontFamily: SANS, fontSize: "10px", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", background: t.color + "22", color: t.color, borderRadius: "100px", padding: "3px 10px", marginLeft: "4px", border: `1px solid ${t.color}44` }}>
+                  Your secondary
+                </span>
+              )}
+            </div>
+            <p style={{ fontFamily: SANS, fontSize: "13px", fontWeight: 500, color: t.color, marginBottom: "10px", letterSpacing: "0.02em" }}>{t.tagline}</p>
+            <p style={{ fontFamily: SANS, fontSize: "14px", fontWeight: 300, color: TEXT, lineHeight: 1.7, marginBottom: "14px" }}>{t.description}</p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+              <div style={{ background: "#f4f1ed", borderRadius: "8px", padding: "12px 14px" }}>
+                <p style={{ fontFamily: SANS, fontSize: "10px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: t.color, marginBottom: "4px" }}>Energizes</p>
+                <p style={{ fontFamily: SANS, fontSize: "13px", fontWeight: 300, color: TEXT, lineHeight: 1.5 }}>{t.energizes}</p>
+              </div>
+              <div style={{ background: "#f4f1ed", borderRadius: "8px", padding: "12px 14px" }}>
+                <p style={{ fontFamily: SANS, fontSize: "10px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: t.color, marginBottom: "4px" }}>Drains</p>
+                <p style={{ fontFamily: SANS, fontSize: "13px", fontWeight: 300, color: TEXT, lineHeight: 1.5 }}>{t.drains}</p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -1282,7 +1350,8 @@ export default function App() {
           />
         )}
         {screen === "gate" && <Gate typeKey={result.primary} result={result} answers={answers} onReveal={handleReveal} />}
-        {screen === "result" && <Result result={result} firstName={firstName} onRetake={handleRetake} />}
+        {screen === "result" && <Result result={result} firstName={firstName} onRetake={handleRetake} onExplore={() => setScreen("explore")} />}
+        {screen === "explore" && <Explore result={result} onBack={() => setScreen("result")} />}
       </div>
     </>
   );
