@@ -6,31 +6,6 @@ const FONTS = `@import url('https://fonts.googleapis.com/css2?family=Inter:wght@
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 const TYPES = {
-  FIRSTMOVER: {
-    id: "FIRSTMOVER",
-    label: "The First Mover",
-    tagline: "Still in your job. Already building what's next.",
-    combo: "9-5 Job + First Income Stream",
-    streams: ["Full-time employment (your stability anchor)", "One focused side income stream", "Skills-based freelancing, consulting, or a digital product to start"],
-    description: "You're not ready to leave your job yet, and you don't need to. Your portfolio career starts with one thing: a single focused income stream built alongside your 9-5, designed to prove the concept before you put anything at risk. The job funds the experiment. The experiment becomes the next chapter.",
-    forYou: "You need the safety net of a salary while you figure out what's next. You want to validate you can find clients or make money before you make any big moves.",
-    energizes: "Visible, measurable progress on something that's yours, without betting the paycheck that keeps your life steady.",
-    drains: "Pressure to 'go all in' before you're ready. Burn-the-boats advice and ultimatums shut you down rather than motivate you.",
-    shadow: "You can live in 'building' mode forever. The safety that lets you start can quietly become the reason you never leap. Set a date and realistic revenue target to evaluate the experiment, not just to begin it.",
-    timeline: [
-      { when: "Next 90 days", what: "First consistent income and proof the concept works or not." },
-      { when: "6 months", what: "Decide whether to scale it or change it based on data instead of fear." },
-      { when: "1 year", what: "Check in with the goal you set for yourself to see if you want to go all in on the experiment you've built." },
-    ],
-    whyHeldBack: "You've been waiting to feel 'ready.' But readiness comes from evidence, and evidence only comes from just starting.",
-    nextStep: "Pick one income stream that is fun for you, useful for others, and non-perfect! Just start.",
-    goFurther: [
-      { title: "What if you literally cannot build alongside your 9-5?", url: "https://maggieblackburn.beehiiv.com/p/what-if-you-literally-cannot-build-alongside-your-9-5" },
-      { title: "Create your own stability", url: "https://maggieblackburn.beehiiv.com/p/create-your-own-stability" },
-    ],
-    color: "#573b30",
-    emoji: "🌱",
-  },
   STABILIZER: {
     id: "STABILIZER",
     label: "The Stabilizer",
@@ -51,7 +26,8 @@ const TYPES = {
     nextStep: "Start the content channel now, while you still have the stability to experiment without pressure.",
     goFurther: [
       { title: "Is growing on LinkedIn the new job security?", url: "https://maggieblackburn.beehiiv.com/p/is-growing-on-linkedin-the-new-job-security" },
-      { title: "4 lessons from building my personal brand", url: "https://maggieblackburn.beehiiv.com/p/4-lessons-from-building-my-personal-brand" },
+      { title: "Create your own stability", url: "https://maggieblackburn.beehiiv.com/p/create-your-own-stability" },
+      { title: "What if you literally cannot build alongside your 9-5?", url: "https://maggieblackburn.beehiiv.com/p/what-if-you-literally-cannot-build-alongside-your-9-5" },
     ],
     color: "#3b9db6",
     emoji: "🌿",
@@ -165,7 +141,7 @@ const QUESTIONS = [
     id: 1,
     q: "What does your ideal Monday morning look like?",
     answers: [
-      { text: "I know exactly what I'm doing: there's a clear structure and I can settle in.", types: ["STABILIZER", "FIRSTMOVER"] },
+      { text: "I know exactly what I'm doing: there's a clear structure and I can settle in.", types: ["STABILIZER", "STABILIZER"] },
       { text: "I'm deep in a project for someone who really needs what I know.", types: ["EXPERT", "FREEAGENT"] },
       { text: "I'm creating: writing, filming, designing something for an audience.", types: ["EDUCATOR", "CONNECTOR"] },
       { text: "I'm in the middle of conversations, connections, or community energy.", types: ["CONNECTOR", "EDUCATOR"] },
@@ -176,7 +152,7 @@ const QUESTIONS = [
     id: 2,
     q: "How do you feel about income unpredictability?",
     answers: [
-      { text: "I need a stable baseline. Variable income keeps me anxious.", types: ["FIRSTMOVER", "STABILIZER"] },
+      { text: "I need a stable baseline. Variable income keeps me anxious.", types: ["STABILIZER", "STABILIZER"] },
       { text: "I'm okay with variation if I have a clear pipeline of clients.", types: ["EXPERT", "CONNECTOR"] },
       { text: "I want income that doesn't always require me to show up.", types: ["EDUCATOR", "FREEAGENT"] },
       { text: "Honestly, I'd rather trade predictability for freedom.", types: ["FREEAGENT", "CONNECTOR"] },
@@ -186,7 +162,7 @@ const QUESTIONS = [
     id: 3,
     q: "Your favorite way to help someone is...",
     answers: [
-      { text: "One-on-one, closely, over time. Real depth with real people.", types: ["EXPERT", "FIRSTMOVER"] },
+      { text: "One-on-one, closely, over time. Real depth with real people.", types: ["EXPERT", "STABILIZER"] },
       { text: "In a group. I love the energy when many people are learning together.", types: ["EDUCATOR", "CONNECTOR"] },
       { text: "By creating something they can use on their own terms, anytime.", types: ["FREEAGENT", "EDUCATOR"] },
       { text: "By building the space where people help each other.", types: ["CONNECTOR", "STABILIZER"] },
@@ -197,8 +173,8 @@ const QUESTIONS = [
     q: "What's your relationship with content creation?",
     answers: [
       { text: "I love it. Sharing ideas online feels natural and genuinely fun.", types: ["EDUCATOR", "STABILIZER"] },
-      { text: "I'd do it if it helped bring in clients, but it's not my priority.", types: ["EXPERT", "FIRSTMOVER"] },
-      { text: "I create things, but I'd rather sell them than post about them.", types: ["FIRSTMOVER", "FREEAGENT"] },
+      { text: "I'd do it if it helped bring in clients, but it's not my priority.", types: ["EXPERT", "STABILIZER"] },
+      { text: "I create things, but I'd rather sell them than post about them.", types: ["STABILIZER", "FREEAGENT"] },
       { text: "I love content specifically when it's for a community I care about.", types: ["CONNECTOR", "EDUCATOR"] },
     ],
   },
@@ -206,7 +182,7 @@ const QUESTIONS = [
     id: 5,
     q: "When you imagine your working life 2 years from now, what stands out most?",
     answers: [
-      { text: "I've built a real income stream alongside my job that gives me options.", types: ["FIRSTMOVER", "STABILIZER"] },
+      { text: "I've built a real income stream alongside my job that gives me options.", types: ["STABILIZER", "STABILIZER"] },
       { text: "I've built something with an audience. People follow what I create.", types: ["EDUCATOR", "STABILIZER"] },
       { text: "I'm the person people refer to when they have a specific problem to solve.", types: ["EXPERT", "FREEAGENT"] },
       { text: "I've built a community people would be devastated to lose access to.", types: ["CONNECTOR"] },
@@ -218,8 +194,8 @@ const QUESTIONS = [
     q: "How do you feel about selling your services?",
     answers: [
       { text: "I prefer content or community to do the heavy lifting. Inbound all the way.", types: ["EDUCATOR", "CONNECTOR"] },
-      { text: "I like 1:1 conversations. Selling feels honest when I know I can help.", types: ["EXPERT", "FIRSTMOVER"] },
-      { text: "I want systems and products that sell so I don't have to pitch constantly.", types: ["FIRSTMOVER", "FREEAGENT"] },
+      { text: "I like 1:1 conversations. Selling feels honest when I know I can help.", types: ["EXPERT", "STABILIZER"] },
+      { text: "I want systems and products that sell so I don't have to pitch constantly.", types: ["STABILIZER", "FREEAGENT"] },
       { text: "I like short outreach bursts when I have space, not ongoing sales.", types: ["FREEAGENT", "CONNECTOR"] },
     ],
   },
@@ -227,11 +203,11 @@ const QUESTIONS = [
     id: 7,
     q: "Complete the sentence: 'The thing I want most from my work is...'",
     answers: [
-      { text: "...to prove I can earn outside of my job before I make any big moves.", types: ["FIRSTMOVER", "STABILIZER"] },
+      { text: "...to prove I can earn outside of my job before I make any big moves.", types: ["STABILIZER", "STABILIZER"] },
       { text: "...security AND self-expression. Both. Not one or the other.", types: ["STABILIZER", "EXPERT"] },
       { text: "...to be recognized as the go-to person in my space.", types: ["EXPERT", "EDUCATOR"] },
       { text: "...to reach a lot of people without trading more hours for it.", types: ["EDUCATOR", "FREEAGENT"] },
-      { text: "...to build something that feels like mine and brings people together.", types: ["CONNECTOR", "FIRSTMOVER"] },
+      { text: "...to build something that feels like mine and brings people together.", types: ["CONNECTOR", "STABILIZER"] },
       { text: "...the freedom to keep changing what I do and who I do it for.", types: ["FREEAGENT", "CONNECTOR"] },
     ],
   },
@@ -239,7 +215,7 @@ const QUESTIONS = [
     id: 8,
     q: "Where are you right now?",
     answers: [
-      { text: "Employed full-time and curious about what else is possible.", types: ["FIRSTMOVER", "STABILIZER"] },
+      { text: "Employed full-time and curious about what else is possible.", types: ["STABILIZER", "STABILIZER"] },
       { text: "Employed, but creatively restless. I need an outlet.", types: ["STABILIZER", "EDUCATOR"] },
       { text: "Already freelancing or consulting, and I want more stability and leverage.", types: ["EXPERT", "FREEAGENT"] },
       { text: "Self-employed and trying to scale beyond trading hours for money.", types: ["EDUCATOR", "FREEAGENT"] },
@@ -250,20 +226,20 @@ const QUESTIONS = [
     id: 9,
     q: "What drains you fastest at work?",
     answers: [
-      { text: "Uncertainty about whether the money is actually coming in.", types: ["FIRSTMOVER", "STABILIZER"] },
+      { text: "Uncertainty about whether the money is actually coming in.", types: ["STABILIZER", "STABILIZER"] },
       { text: "Shallow, transactional work with no real depth.", types: ["EXPERT", "EDUCATOR"] },
       { text: "Doing the same thing for the same client, month after month.", types: ["FREEAGENT", "CONNECTOR"] },
       { text: "Working alone, with no people energy around me.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "Constant selling and self-promotion.", types: ["EXPERT", "FIRSTMOVER"] },
+      { text: "Constant selling and self-promotion.", types: ["EXPERT", "STABILIZER"] },
     ],
   },
   {
     id: 10,
     q: "What's the hardest challenge you're facing right now?",
     answers: [
-      { text: "Finding clients or customers consistently.", types: ["FIRSTMOVER", "EXPERT"] },
+      { text: "Finding clients or customers consistently.", types: ["STABILIZER", "EXPERT"] },
       { text: "Positioning myself — I'm not sure how to explain what I do.", types: ["FREEAGENT", "STABILIZER"] },
-      { text: "Choosing what to start — there are too many options.", types: ["FIRSTMOVER", "FREEAGENT"] },
+      { text: "Choosing what to start — there are too many options.", types: ["STABILIZER", "FREEAGENT"] },
       { text: "Selling myself. I know I'm good but struggle to put a price on it.", types: ["EXPERT", "EDUCATOR"] },
       { text: "Building an audience or getting visible enough to attract opportunities.", types: ["EDUCATOR", "CONNECTOR"] },
       { text: "Staying consistent while juggling everything else in my life.", types: ["STABILIZER", "CONNECTOR"] },
@@ -274,7 +250,7 @@ const QUESTIONS = [
 // ─── Scoring ─────────────────────────────────────────────────────────────────
 
 // Deterministic tie-break order when scores are equal
-const PRIORITY = ["FIRSTMOVER", "STABILIZER", "EXPERT", "EDUCATOR", "CONNECTOR", "FREEAGENT"];
+const PRIORITY = ["STABILIZER", "EXPERT", "EDUCATOR", "CONNECTOR", "FREEAGENT"];
 
 function getResult(answers) {
   const scores = Object.keys(TYPES).reduce((a, k) => ({ ...a, [k]: 0 }), {});
@@ -320,7 +296,7 @@ const CREAM_MUTED = "#ffffff"; // softer body copy
 function TypeIcon({ id, color, size = 26 }) {
   const common = { width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: color, strokeWidth: 1.5, strokeLinecap: "round", strokeLinejoin: "round", xmlns: "http://www.w3.org/2000/svg" };
   switch (id) {
-    case "FIRSTMOVER": // sprout
+    case "STABILIZER": // sprout
       return (<svg {...common}><path d="M12 20v-6" /><path d="M12 14c0-3 2-5 5-5 0 3-2 5-5 5Z" /><path d="M12 14c0-2.5-2-4.5-5-4.5 0 2.5 2 4.5 5 4.5Z" /></svg>);
     case "STABILIZER": // anchor
       return (<svg {...common}><circle cx="12" cy="5" r="2" /><path d="M12 7v13" /><path d="M5 12a7 7 0 0 0 14 0" /><path d="M8 12H5M19 12h-3" /></svg>);
