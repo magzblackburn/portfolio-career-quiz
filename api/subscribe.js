@@ -25,13 +25,6 @@ export default async function handler(req, res) {
   const airtableKey = process.env.AIRTABLE_API_KEY;
   const airtableBaseId = process.env.AIRTABLE_BASE_ID;
 
-  console.log("ENV CHECK", {
-    hasBeehiivKey: !!apiKey,
-    hasPublicationId: !!publicationId,
-    hasAirtableKey: !!airtableKey,
-    hasAirtableBaseId: !!airtableBaseId,
-  });
-
   // ── Beehiiv ──────────────────────────────────────────────────────────────────
   if (publicationId && apiKey) {
     try {
