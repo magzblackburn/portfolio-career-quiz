@@ -28,7 +28,7 @@ export default async function handler(req, res) {
   // ── Beehiiv ──────────────────────────────────────────────────────────────────
   if (publicationId && apiKey) {
     try {
-      await fetch(
+      const beehiivRes = await fetch(
         `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
         {
           method: "POST",
@@ -48,6 +48,8 @@ export default async function handler(req, res) {
           }),
         }
       );
+      const beehiivData = await beehiivRes.json();
+      console.log("Beehiiv status:", beehiivRes.status, JSON.stringify(beehiivData));
     } catch (err) {
       console.error("Beehiiv error:", err);
     }
@@ -64,14 +66,13 @@ export default async function handler(req, res) {
         "Submitted At": new Date().toISOString(),
       };
 
-      // Add each answer as Q1, Q2, etc.
       if (Array.isArray(responses)) {
         responses.forEach(({ answer }, i) => {
           fields[`Q${i + 1}`] = answer;
         });
       }
 
-      await fetch(
+      const airtableRes = await fetch(
         `https://api.airtable.com/v0/${airtableBaseId}/Responses`,
         {
           method: "POST",
@@ -82,6 +83,8 @@ export default async function handler(req, res) {
           body: JSON.stringify({ fields }),
         }
       );
+      const airtableData = await airtableRes.json();
+      console.log("Airtable status:", airtableRes.status, JSON.stringify(airtableData));
     } catch (err) {
       console.error("Airtable error:", err);
     }
