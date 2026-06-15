@@ -259,12 +259,14 @@ const QUESTIONS = [
   },
   {
     id: 10,
-    q: "How do you feel about being visible online?",
+    q: "What's the hardest challenge you're facing right now?",
     answers: [
-      { text: "Happy to post and build an audience. It's genuinely a strength.", types: ["EDUCATOR", "STABILIZER"] },
-      { text: "I'll show up for a community I care about, not for clout.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "I'd rather my work or my products speak for me.", types: ["FREEAGENT", "FIRSTMOVER"] },
-      { text: "I prefer trust built one-to-one over broadcasting to everyone.", types: ["EXPERT", "STABILIZER"] },
+      { text: "Finding clients or customers consistently.", types: ["FIRSTMOVER", "EXPERT"] },
+      { text: "Positioning myself — I'm not sure how to explain what I do.", types: ["FREEAGENT", "STABILIZER"] },
+      { text: "Choosing what to start — there are too many options.", types: ["FIRSTMOVER", "FREEAGENT"] },
+      { text: "Selling myself. I know I'm good but struggle to put a price on it.", types: ["EXPERT", "EDUCATOR"] },
+      { text: "Building an audience or getting visible enough to attract opportunities.", types: ["EDUCATOR", "CONNECTOR"] },
+      { text: "Staying consistent while juggling everything else in my life.", types: ["STABILIZER", "CONNECTOR"] },
     ],
   },
 ];
