@@ -51,6 +51,24 @@ export default async function handler(req, res) {
       );
       const beehiivData = await beehiivRes.json();
       console.log("Beehiiv status:", beehiivRes.status, JSON.stringify(beehiivData));
+
+      // Enroll in automation via separate call
+      const subscriberId = beehiivData?.data?.id;
+      if (subscriberId) {
+        const automationRes = await fetch(
+          `https://api.beehiiv.com/v2/publications/${publicationId}/automations/aut_bc695caa-d25b-4133-894c-04423a301510/journeys`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify({ subscriber_id: subscriberId }),
+          }
+        );
+        const automationData = await automationRes.json();
+        console.log("Automation status:", automationRes.status, JSON.stringify(automationData));
+      }
     } catch (err) {
       console.error("Beehiiv error:", err);
     }
