@@ -5,9 +5,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { email, firstName, archetype } = req.body ?? {};
+  const { email, firstName, archetype, secondaryArchetype, responses } = req.body ?? {};
 
-  // Server-side validation — never trust the client
   if (!email || !firstName || !archetype) {
     return res.status(400).json({ error: "Missing required fields" });
   }
@@ -23,42 +22,70 @@ export default async function handler(req, res) {
 
   const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
   const apiKey = process.env.BEEHIIV_API_KEY;
+  const airtableKey = process.env.AIRTABLE_API_KEY;
+  const airtableBaseId = process.env.AIRTABLE_BASE_ID;
 
-  if (!publicationId || !apiKey) {
-    return res.status(500).json({ error: "Server configuration error" });
-  }
-
-  try {
-    const response = await fetch(
-      `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          email: email.trim().toLowerCase(),
-          first_name: firstName.trim(),
-          reactivate_existing: true,
-          send_welcome_email: true,
-          custom_fields: [
-            { name: "archetype", value: archetype },
-          ],
-        }),
-      }
-    );
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      console.error("Beehiiv error:", data);
-      return res.status(response.status).json({ error: data.message || "Beehiiv error" });
+  // ── Beehiiv ──────────────────────────────────────────────────────────────────
+  if (publicationId && apiKey) {
+    try {
+      await fetch(
+        `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({
+            email: email.trim().toLowerCase(),
+            first_name: firstName.trim(),
+            reactivate_existing: true,
+            send_welcome_email: true,
+            custom_fields: [
+              { name: "archetype", value: archetype },
+              { name: "secondary_archetype", value: secondaryArchetype ?? "" },
+            ],
+          }),
+        }
+      );
+    } catch (err) {
+      console.error("Beehiiv error:", err);
     }
-
-    return res.status(200).json({ success: true });
-  } catch (err) {
-    console.error("Subscribe error:", err);
-    return res.status(500).json({ error: "Internal server error" });
   }
+
+  // ── Airtable ─────────────────────────────────────────────────────────────────
+  if (airtableKey && airtableBaseId) {
+    try {
+      const fields = {
+        "Name": firstName.trim(),
+        "Email": email.trim().toLowerCase(),
+        "Primary Archetype": archetype,
+        "Secondary Archetype": secondaryArchetype ?? "",
+        "Submitted At": new Date().toISOString(),
+      };
+
+      // Add each question/answer as its own column
+      if (Array.isArray(responses)) {
+        responses.forEach(({ question, answer }) => {
+          fields[question] = answer;
+        });
+      }
+
+      await fetch(
+        `https://api.airtable.com/v0/${airtableBaseId}/Responses`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${airtableKey}`,
+          },
+          body: JSON.stringify({ fields }),
+        }
+      );
+    } catch (err) {
+      console.error("Airtable error:", err);
+    }
+  }
+
+  return res.status(200).json({ success: true });
 }

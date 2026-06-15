@@ -943,7 +943,7 @@ function Field({ label, type = "text", value, onChange, placeholder }) {
 }
 
 // ─── Gate screen ──────────────────────────────────────────────────────────────
-function Gate({ typeKey, onReveal }) {
+function Gate({ typeKey, result, answers, onReveal }) {
   const t = TYPES[typeKey];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -962,11 +962,23 @@ function Gate({ typeKey, onReveal }) {
     }
     setError("");
     setLoading(true);
+
+    const responseLog = QUESTIONS.map((q, i) => ({
+      question: q.q,
+      answer: answers[i] !== null ? q.answers[answers[i]].text : "",
+    }));
+
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), firstName: name.trim(), archetype: t.label }),
+        body: JSON.stringify({
+          email: email.trim(),
+          firstName: name.trim(),
+          archetype: t.label,
+          secondaryArchetype: TYPES[result.secondary].label,
+          responses: responseLog,
+        }),
       });
       if (!res.ok) {
         const data = await res.json();
@@ -1256,7 +1268,7 @@ export default function App() {
             onBack={handleBack}
           />
         )}
-        {screen === "gate" && <Gate typeKey={result.primary} onReveal={handleReveal} />}
+        {screen === "gate" && <Gate typeKey={result.primary} result={result} answers={answers} onReveal={handleReveal} />}
         {screen === "result" && <Result result={result} firstName={firstName} onRetake={handleRetake} />}
       </div>
     </>
