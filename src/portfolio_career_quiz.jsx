@@ -686,7 +686,7 @@ function Intro({ onStart }) {
           color: BG,
           marginBottom: "28px",
         }}>
-          The Six Archetypes
+          The Five Archetypes
         </p>
         <div style={{
           display: "flex",
