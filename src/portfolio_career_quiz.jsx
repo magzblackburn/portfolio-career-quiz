@@ -309,10 +309,8 @@ const BORDER= "#ddd5cc";
 
 // Brand palette — Primary #341d12, Secondary #3b9db6, Tertiary #cdd492 (+ white/black only)
 const GOLD   = "#ffffff"; // italic accent word + meta text
-const COPPER = "#3b9db6"; // secondary — medallion
 const CREAM  = "#ffffff"; // headline + body on dark bg
 const CREAM_MUTED = "#ffffff"; // softer body copy
-const BAND   = "#cdd492"; // tertiary — ornamental border bands
 
 // ─── Ornamental border band (top & bottom) ───────────────────────────────────
 
