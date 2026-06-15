@@ -41,6 +41,7 @@ export default async function handler(req, res) {
             first_name: firstName.trim(),
             reactivate_existing: true,
             send_welcome_email: true,
+            automation_ids: ["aut_bc695caa-d25b-4133-894c-04423a301510"],
             custom_fields: [
               { name: "archetype", value: archetype },
               { name: "secondary_archetype", value: secondaryArchetype ?? "" },
