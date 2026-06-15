@@ -985,13 +985,13 @@ function Gate({ typeKey, result, answers, onReveal }) {
         )}
         <button
           style={{
-            ...S.btn(t.color),
+            ...S.btn(BG),
             width: "100%",
             padding: "16px",
             borderRadius: "10px",
             fontSize: "13px",
             letterSpacing: "0.1em",
-            boxShadow: hover ? `0 6px 24px ${t.color}44` : "none",
+            boxShadow: hover ? `0 6px 24px ${BG}44` : "none",
             transform: hover ? "translateY(-1px)" : "none",
           }}
           onMouseEnter={() => setHover(true)}
