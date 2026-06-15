@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background-color: #341d12;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 80px 40px;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+
+  h1 em {
+    font-style: italic;
+  }
+
+  p.sub {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    max-width: 640px;
+    margin-bottom: 36px;
+  }
+
+  .btn {
+    background: #ffffff;
+    color: #341d12;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 44px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 28px;
+  }
+
+  .bottom {
+    background: #f4f1ed;
+    border-top: 10px solid #3b9db6;
+    padding: 28px 80px 32px;
+  }
+
+  .bottom-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #341d12;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .archetypes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .archetype {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .archetype span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #341d12;
+    line-height: 1.3;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top">
+    <h1>What kind of portfolio career<br>is actually <em>right for you?</em></h1>
+    <p class="sub">There's no one-size-fits-all path to a multi-income career. This quiz identifies which combination of income streams fits your personality, your risk tolerance, and the way you want to spend your time.</p>
+    <div class="btn">Find out</div>
+    <p class="tag">10 Questions &middot; 5 Minutes</p>
+  </div>
+
+  <div class="bottom">
+    <p class="bottom-label">The Five Archetypes</p>
+    <div class="archetypes">
+
+      <!-- Stabilizer: anchor -->
+      <div class="archetype">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b9db6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="5" r="2" />
+          <path d="M12 7v13" />
+          <path d="M5 12a7 7 0 0 0 14 0" />
+          <path d="M8 12H5M19 12h-3" />
+        </svg>
+        <span>The Stabilizer</span>
+      </div>
+
+      <!-- Advisor: diamond -->
+      <div class="archetype">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b9db6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 3h12l3 6-9 12L3 9Z" />
+          <path d="M3 9h18M9 3 6 9l6 12 6-12-3-6" />
+        </svg>
+        <span>The Advisor</span>
+      </div>
+
+      <!-- Educator: pencil -->
+      <div class="archetype">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b9db6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 20h4L19 9a2 2 0 0 0-3-3L5 17v3Z" />
+          <path d="M14 7l3 3" />
+        </svg>
+        <span>The Educator</span>
+      </div>
+
+      <!-- Connector: nodes -->
+      <div class="archetype">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b9db6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="6" cy="6" r="2.5" />
+          <circle cx="18" cy="6" r="2.5" />
+          <circle cx="12" cy="18" r="2.5" />
+          <path d="M8 7.5 16 16M16 7.5 8 16M8 6h8" />
+        </svg>
+        <span>The Connector</span>
+      </div>
+
+      <!-- Free Agent: paper plane -->
+      <div class="archetype">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b9db6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 3 3 11l7 3 3 7 8-18Z" />
+          <path d="M10 14l4-4" />
+        </svg>
+        <span>The Free Agent</span>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
