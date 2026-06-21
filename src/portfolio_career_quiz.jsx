@@ -1025,7 +1025,6 @@ function Gate({ typeKey, result, answers, onReveal }) {
 function Result({ result, firstName, onRetake, onExplore }) {
   const t = TYPES[result.primary];
   const s = TYPES[result.secondary];
-  const [hover, setHover] = useState(false);
   const [pdfLoading, setPdfLoading] = useState(false);
   const name = (firstName || "").trim();
   const greeting = name ? `${name}, here's the thing about ${t.label}s.` : `Here's the thing about ${t.label}s.`;
