@@ -113,15 +113,15 @@ const TYPES = {
     tagline: "Build an audience. Monetize what you love.",
     combo: "Content Platform + Multiple Monetization Streams",
     streams: ["A content channel you own (newsletter, podcast, YouTube, or social)", "Brand partnerships, sponsorships, or affiliate income", "Digital products, paid community, or memberships"],
-    description: "You want to build something in public — and get paid for it. Your portfolio career is built around a content channel you own, with multiple monetization streams that grow alongside your audience. The goal isn't one viral moment. It's compounding: every piece of content you publish makes the next one more valuable.",
+    description: "You want to build something in public—and get paid for it. Your portfolio career is built around a content channel you own, with multiple monetization streams that grow alongside your audience. The goal isn't one viral moment. It's compounding: every piece of content you publish makes the next one more valuable.",
     forYou: "You have ideas you want to share and ultimately want to scale your impact to more people.",
     energizes: "Seeing your content reach people you've never met. Building something that earns while you sleep. Having a platform that's genuinely yours.",
     drains: "Client work with no creative control. Being paid for your time instead of your ideas. Doing work that disappears the moment you stop showing up.",
     shadow: "Chasing trends and platform algorithms instead of building something that compounds. Consistency over time matters more than any single piece of content.",
     timeline: [
-      { when: "Next 90 days", what: "Pick one long-form piece of content you OWN (e.g. newsletter or podcast), one social channel (e.g. LinkedIn, Instagram), and one topic you could talk about for years. Publish consistently — 1x a week is okay to start!" },
+      { when: "Next 90 days", what: "Pick one long-form piece of content you OWN (e.g. newsletter or podcast), one social channel (e.g. LinkedIn, Instagram), and one topic you could talk about for years. Publish consistently—1x a week is okay to start!" },
       { when: "6 months", what: "Increase your publishing rhythm to 3x per week and set up your first monetization experiment." },
-      { when: "1 year", what: "Multiple income streams tied to your content — partnerships, products, or a paid community." },
+      { when: "1 year", what: "Multiple income streams tied to your content—partnerships, products, or a paid community." },
     ],
     whyHeldBack: "You think you need a bigger audience before you can monetize. You don't. The right 1,000 people are worth more than a million passive followers.",
     nextStep: "Pick your platform and your topic. Commit to 90 days of consistent publishing before you change anything.",
@@ -141,20 +141,20 @@ const QUESTIONS = [
     id: 1,
     q: "What does your ideal Monday morning look like?",
     answers: [
-      { text: "I know exactly what I'm doing — clear structure, stable work, and I can settle in.", types: ["STABILIZER", "EXPERT"] },
+      { text: "I know exactly what I'm doing—clear structure, stable work, and I can settle in.", types: ["STABILIZER", "EXPERT"] },
       { text: "I'm deep in work for a client who specifically needs my expertise.", types: ["EXPERT", "CONNECTOR"] },
-      { text: "I'm teaching or coaching — helping someone work through a real challenge.", types: ["EDUCATOR", "STABILIZER"] },
+      { text: "I'm teaching or coaching—helping someone work through a real challenge.", types: ["EDUCATOR", "STABILIZER"] },
       { text: "I'm in the middle of conversations, introductions, or building something with people.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "I'm creating — writing, recording, or publishing something for my audience.", types: ["CREATOR", "EDUCATOR"] },
+      { text: "I'm creating—writing, recording, or publishing something for my audience.", types: ["CREATOR", "EDUCATOR"] },
     ],
   },
   {
     id: 2,
     q: "How do you feel about income unpredictability?",
     answers: [
-      { text: "I need a reliable baseline — variable income stresses me out more than I want to admit.", types: ["STABILIZER", "EXPERT"] },
+      { text: "I need a reliable baseline—variable income stresses me out more than I want to admit.", types: ["STABILIZER", "EXPERT"] },
       { text: "I can handle variation if I have a clear client pipeline I trust.", types: ["EXPERT", "STABILIZER"] },
-      { text: "I want income tied to the transformation I provide — programs and clients who invest to grow.", types: ["EDUCATOR", "CONNECTOR"] },
+      { text: "I want income tied to the transformation I provide—programs and clients who invest to grow.", types: ["EDUCATOR", "CONNECTOR"] },
       { text: "I want content and products to generate income whether or not I show up that day.", types: ["CREATOR", "EDUCATOR"] },
       { text: "I'm okay with unpredictability as long as I have strong relationships and referrals.", types: ["CONNECTOR", "STABILIZER"] },
     ],
@@ -164,21 +164,21 @@ const QUESTIONS = [
     q: "Your favorite way to help someone is...",
     answers: [
       { text: "One-on-one, over time. Real depth with real people I know well.", types: ["EXPERT", "STABILIZER"] },
-      { text: "In a group — the energy when people learn and grow together is unmatched.", types: ["EDUCATOR", "CONNECTOR"] },
+      { text: "In a group—the energy when people learn and grow together is unmatched.", types: ["EDUCATOR", "CONNECTOR"] },
       { text: "Through content or products they can use on their own terms, anytime.", types: ["CREATOR", "EDUCATOR"] },
       { text: "By making the right introduction or building the room where the right people meet.", types: ["CONNECTOR", "EXPERT"] },
-      { text: "By being a steady, trusted sounding board — someone they can reliably count on.", types: ["STABILIZER", "CONNECTOR"] },
+      { text: "By being a steady, trusted sounding board—someone they can reliably count on.", types: ["STABILIZER", "CONNECTOR"] },
     ],
   },
   {
     id: 4,
     q: "What's your relationship with content creation?",
     answers: [
-      { text: "It's central to my plan — building an audience online is how I'll grow.", types: ["CREATOR", "EDUCATOR"] },
+      { text: "It's central to my plan—building an audience online is how I'll grow.", types: ["CREATOR", "EDUCATOR"] },
       { text: "I'd use it to attract clients, but referrals and relationships are my real engine.", types: ["EXPERT", "STABILIZER"] },
       { text: "I like it for credibility, but I'm not trying to become an influencer.", types: ["STABILIZER", "CONNECTOR"] },
       { text: "I love it when it's in service of a community I'm genuinely invested in building.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "I see it as my teaching medium — content is how I share my methodology at scale.", types: ["EDUCATOR", "CREATOR"] },
+      { text: "I see it as my teaching medium—content is how I share my methodology at scale.", types: ["EDUCATOR", "CREATOR"] },
     ],
   },
   {
@@ -187,20 +187,20 @@ const QUESTIONS = [
     answers: [
       { text: "I've built a stable income stream alongside my job that gives me real options.", types: ["STABILIZER", "EXPERT"] },
       { text: "I have a small number of high-trust clients who rely on me for serious ongoing work.", types: ["EXPERT", "CONNECTOR"] },
-      { text: "I'm running coaching or group programs — people pay me to teach what I know.", types: ["EDUCATOR", "STABILIZER"] },
+      { text: "I'm running coaching or group programs—people pay me to teach what I know.", types: ["EDUCATOR", "STABILIZER"] },
       { text: "I've built a community people couldn't imagine losing.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "I've built a real audience — people follow my content and I monetize it in multiple ways.", types: ["CREATOR", "EDUCATOR"] },
+      { text: "I've built a real audience—people follow my content and I monetize it in multiple ways.", types: ["CREATOR", "EDUCATOR"] },
     ],
   },
   {
     id: 6,
     q: "How do you feel about selling your services or products?",
     answers: [
-      { text: "I like 1:1 conversations — selling feels honest when I know I can genuinely help.", types: ["EXPERT", "STABILIZER"] },
-      { text: "I want programs and systems that sell themselves — structure over constant hustle.", types: ["STABILIZER", "EDUCATOR"] },
+      { text: "I like 1:1 conversations—selling feels honest when I know I can genuinely help.", types: ["EXPERT", "STABILIZER"] },
+      { text: "I want programs and systems that sell themselves—structure over constant hustle.", types: ["STABILIZER", "EDUCATOR"] },
       { text: "I prefer being pulled in by referrals and trust, not pitching cold.", types: ["CONNECTOR", "EXPERT"] },
-      { text: "I want my content to do the selling — I'd rather publish than pitch.", types: ["CREATOR", "CONNECTOR"] },
-      { text: "I love when my students' results sell for me — transformation speaks louder than outreach.", types: ["EDUCATOR", "CREATOR"] },
+      { text: "I want my content to do the selling—I'd rather publish than pitch.", types: ["CREATOR", "CONNECTOR"] },
+      { text: "I love when my students' results sell for me—transformation speaks louder than outreach.", types: ["EDUCATOR", "CREATOR"] },
     ],
   },
   {
@@ -220,21 +220,21 @@ const QUESTIONS = [
     q: "Where are you right now?",
     answers: [
       { text: "Employed full-time and curious about what else might be possible.", types: ["STABILIZER", "CONNECTOR"] },
-      { text: "Employed but creatively restless — I want to build something that reaches people.", types: ["CREATOR", "STABILIZER"] },
+      { text: "Employed but creatively restless—I want to build something that reaches people.", types: ["CREATOR", "STABILIZER"] },
       { text: "Already consulting or freelancing and looking to build more leverage and income.", types: ["EXPERT", "CONNECTOR"] },
       { text: "Running my own business and trying to scale without just adding more hours.", types: ["EDUCATOR", "EXPERT"] },
-      { text: "Investing my energy in building relationships and community — that's where my focus is.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "Investing my energy in building relationships and community—that's where my focus is.", types: ["CONNECTOR", "EDUCATOR"] },
     ],
   },
   {
     id: 9,
     q: "What drains you fastest at work?",
     answers: [
-      { text: "Uncertainty about income — I need to know the money is actually coming in.", types: ["STABILIZER", "EXPERT"] },
+      { text: "Uncertainty about income—I need to know the money is actually coming in.", types: ["STABILIZER", "EXPERT"] },
       { text: "Shallow or generic work where I can't go deep or use my real expertise.", types: ["EXPERT", "EDUCATOR"] },
       { text: "Repeating myself one-to-one with no way to reach or impact more people.", types: ["EDUCATOR", "CREATOR"] },
-      { text: "Working in isolation — I need people energy, relationships, and real connection.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "Creating work that disappears — no audience, no ownership, nothing that compounds.", types: ["CREATOR", "CONNECTOR"] },
+      { text: "Working in isolation—I need people energy, relationships, and real connection.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "Creating work that disappears—no audience, no ownership, nothing that compounds.", types: ["CREATOR", "CONNECTOR"] },
     ],
   },
   {
@@ -242,11 +242,11 @@ const QUESTIONS = [
     q: "What's the hardest challenge you're facing right now?",
     answers: [
       { text: "Finding clients or customers consistently.", types: ["STABILIZER", "EXPERT"] },
-      { text: "Positioning — I'm not sure how to explain what I do or charge what I'm worth.", types: ["EXPERT", "CONNECTOR"] },
+      { text: "Positioning—I'm not sure how to explain what I do or charge what I'm worth.", types: ["EXPERT", "CONNECTOR"] },
       { text: "Building and launching a scalable offer or program I can teach repeatedly.", types: ["EDUCATOR", "STABILIZER"] },
       { text: "Growing and monetizing a community that people genuinely value.", types: ["CONNECTOR", "EDUCATOR"] },
       { text: "Building an audience and getting visible enough to attract real opportunities.", types: ["CREATOR", "STABILIZER"] },
-      { text: "Staying consistent — I start things but struggle to maintain momentum over time.", types: ["CREATOR", "CONNECTOR"] },
+      { text: "Staying consistent—I start things but struggle to maintain momentum over time.", types: ["CREATOR", "CONNECTOR"] },
     ],
   },
 ];
@@ -289,7 +289,7 @@ const TEXT  = "#2e1f18";
 const MID   = "#000000";
 const BORDER= "#ddd5cc";
 
-// Brand palette — Primary #341d12, Secondary #3b9db6, Tertiary #cdd492 (+ white/black only)
+// Brand palette—Primary #341d12, Secondary #3b9db6, Tertiary #cdd492 (+ white/black only)
 const GOLD   = "#ffffff"; // italic accent word + meta text
 const CREAM  = "#ffffff"; // headline + body on dark bg
 const CREAM_MUTED = "#ffffff"; // softer body copy
@@ -307,9 +307,9 @@ function TypeIcon({ id, color, size = 26 }) {
     case "EDUCATOR": // pencil
       return (<svg {...common}><path d="M4 20h4L19 9a2 2 0 0 0-3-3L5 17v3Z" /><path d="M14 7l3 3" /></svg>);
     case "CONNECTOR": // connected nodes
-      return (<svg {...common}><circle cx="6" cy="6" r="2.5" /><circle cx="18" cy="6" r="2.5" /><circle cx="12" cy="18" r="2.5" /><path d="M8 7.5 16 16M16 7.5 8 16M8 6h8" /></svg>);
-    case "CREATOR": // paper plane
-      return (<svg {...common}><path d="M21 3 3 11l7 3 3 7 8-18Z" /><path d="M10 14l4-4" /></svg>);
+      return (<svg {...common}><circle cx="6" cy="6" r="2.5" /><circle cx="18" cy="6" r="2.5" /><circle cx="12" cy="18" r="2.5" /><path d="M8.5 6H15.5M7.1 8.2 10.9 15.8M16.9 8.2 13.1 15.8" /></svg>);
+    case "CREATOR": // palette
+      return (<svg {...common}><path d="M12 3C7 3 3 7 3 12s4 9 9 9c.6 0 1-.5 1-1v-1.5c0-.3.2-.5.5-.5H16a3 3 0 0 0 3-3C19 7.9 16 3 12 3z" /><circle cx="8.5" cy="11" r="1.3" /><circle cx="12" cy="7.5" r="1.3" /><circle cx="15.5" cy="11" r="1.3" /></svg>);
     default:
       return null;
   }
@@ -974,7 +974,7 @@ function Gate({ typeKey, result, answers, onReveal }) {
         return;
       }
     } catch {
-      // Non-blocking — don't prevent user from seeing results if the API call fails
+      // Non-blocking—don't prevent user from seeing results if the API call fails
     }
     setLoading(false);
     onReveal(name, email);
