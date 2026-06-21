@@ -9,21 +9,21 @@ const TYPES = {
   STABILIZER: {
     id: "STABILIZER",
     label: "The Stabilizer",
-    tagline: "Anchored income. Creative freedom on your own terms.",
-    combo: "Corporate or Fractional Role + Content Creator",
-    streams: ["Steady salary or retainer (your anchor)", "Content creation: newsletter, video, social", "Brand deals or affiliate income over time"],
-    description: "You're not ready to go all-in on uncertainty, and you don't have to be. Your portfolio career is built on a reliable “anchor” income with a creative outlet layered on top. Over time, that creative channel grows into something that has its own momentum. You get to build in public without betting your rent on it.",
-    forYou: "You value security but crave expression. You're good at your job and you don't hate it. You just want more of yourself in your working life.",
-    energizes: "Creative expression with a safety net underneath it. Building something that's recognizably yours without the rent riding on it.",
+    tagline: "Anchored income. Freedom to build on the side.",
+    combo: "Anchor Income + Service-Based Offer",
+    streams: ["A reliable anchor: full-time employment with enough money to give you breathing room", "A service-based offer: targeting who you want to help, building off your current skills and experience", "Client income as it grows"],
+    description: "You're not ready to go all-in on uncertainty, and you don't have to be. Your portfolio career is built on a reliable \"anchor\" income that gives you room to experiment. Over time, the experiment can give you confidence without having to quit tomorrow.",
+    forYou: "You value security but don't want all of your income reliant on one employer. You're good at your job and you don't hate it. You just want more of yourself in your working life.",
+    energizes: "Building something that you own, freedom, and creative expression.",
     drains: "Being forced to choose between security and creativity, as if you can't have both.",
-    shadow: "The day job can become a place to hide. With no urgency, the creative channel stays a hobby forever. Treat it like a real channel with a real cadence, even while it's small.",
+    shadow: "The day job can become a place to hide. With no urgency or timeline, it's easy to fall back on the full-time job. Treat it like a real channel with a real cadence, even while it's small.",
     timeline: [
-      { when: "Next 90 days", what: "Choose one channel and topic you genuinely love talking about. Commit to a realistic but consistent publishing rhythm." },
-      { when: "6 months", what: "A small but loyal audience and a clear sense of what resonates." },
-      { when: "1 year", what: "Early brand or affiliate income, and an asset that's genuinely yours." },
+      { when: "Next 90 days", what: "Figure out who you would love to help. Reach out to 5–10 people to hold informational interviews to build your offering." },
+      { when: "6 months", what: "Land your first client by sharing your offer to your target audience." },
+      { when: "1 year", what: "Decide what you want to do next with your first offer and your full-time role." },
     ],
-    whyHeldBack: "You think you have to quit to be a 'real' creator. You don't. The stability is exactly what lets you experiment without desperation.",
-    nextStep: "Start the content channel now, while you still have the stability to experiment without pressure.",
+    whyHeldBack: "You think you have to quit to have a portfolio career. You don't. The stability is exactly what lets you experiment without desperation.",
+    nextStep: "Start by figuring out who you want to help and how you can help them while you still have the stability to experiment without pressure.",
     goFurther: [
       { title: "Is growing on LinkedIn the new job security?", url: "https://maggieblackburn.beehiiv.com/p/is-growing-on-linkedin-the-new-job-security" },
       { title: "Create your own stability", url: "https://maggieblackburn.beehiiv.com/p/create-your-own-stability" },
@@ -36,9 +36,9 @@ const TYPES = {
     id: "EXPERT",
     label: "The Advisor",
     tagline: "Deep work. High trust. Premium relationships.",
-    combo: "Fractional Work + 1:1 Advising",
-    streams: ["Fractional role (2-3 days/week retainer)", "1:1 advising clients", "Occasional advisory or consulting days"],
-    description: "You're the kind of person people seek out specifically. Your portfolio career is built around your expertise: in one lane as a fractional leader bringing that expertise to growing companies, and in another as an advisor helping individuals navigate the territory you've already crossed.",
+    combo: "High-Trust Client Work + 1:1 Advising",
+    streams: ["Your anchor income: Fractional, consulting, or freelance retainers", "1:1 advising or coaching clients", "Occasional advisory days or speaking as you grow"],
+    description: "You're the kind of person people seek out specifically. Your portfolio career is built around your expertise: in one lane as a leader bringing that expertise to growing companies, and in another as an advisor/mentor helping individuals navigate the territory you've already crossed.",
     forYou: "You love working closely with people, you have deep skills in a specific domain, and you want to make serious income without being trapped in one company's org chart.",
     energizes: "Deep, high-trust work where you're brought in by name. Being the person someone specifically wanted in the room.",
     drains: "Shallow, transactional, high-volume work. Selling yourself to strangers who don't yet know what you're worth.",
@@ -61,19 +61,19 @@ const TYPES = {
     id: "EDUCATOR",
     label: "The Educator",
     tagline: "Teach what you know. Scale what works.",
-    combo: "Group Cohorts + 1:1 Coaching",
-    streams: ["1:1 coaching clients (your premium offer)", "Group cohort or workshop launches", "Content to build your audience over time"],
+    combo: "1:1 Coaching or Mentoring + Group Programs",
+    streams: ["Your anchor income / premium offer: 1:1 coaching, mentoring, or advising", "Your signature offer: Group cohort, workshop, or mastermind launches", "Content or community to build your audience over time"],
     description: "You love teaching and you're good at it. Your portfolio career combines the intimacy of 1:1 coaching with the scale and energy of group programs. The 1:1 work funds and informs the group work, and the group work lets you help more people at once without multiplying your hours.",
     forYou: "You want to develop a methodology or a transformation you help people through, and you want to reach more people without burning out on back-to-back solo calls.",
     energizes: "Watching someone transform, and the energy of a room full of people learning at once. Impact that scales beyond your calendar.",
-    drains: "Back-to-back solo calls with no leverage. Being stuck one-to-one forever with no way to reach more people.",
+    drains: "Back-to-back solo calls with no leverage. Being stuck one-to-one forever with no way to reach more people. Selling constantly. You want to teach, not pitch.",
     shadow: "You'll build the elaborate course before anyone's asked for it. Perfectionism delays the launch. Run the tiny beta first, then build what people actually need.",
     timeline: [
       { when: "Next 90 days", what: "Take a handful of 1:1 clients to sharpen your framework and proof." },
       { when: "6 months", what: "Run a small beta cohort using what you learned 1:1." },
-      { when: "1 year", what: "A repeatable group program plus content compounding your reach." },
+      { when: "1 year", what: "A repeatable group program you can iterate on over time." },
     ],
-    whyHeldBack: "You think you need a big audience before you can teach. You don't. A small, warm group is more than enough to start.",
+    whyHeldBack: "Perfectionism. You care a lot about your clients and spend time delivering them the best experience, leaving you little time to promote and get new clients.",
     nextStep: "Start with a handful of 1:1 clients to sharpen your framework. Then package what you learn into a small group cohort with a waitlist.",
     goFurther: [
       { title: "Selling from the heart", url: "https://maggieblackburn.beehiiv.com/p/how-to-sell-without-feeling-salesy" },
@@ -86,17 +86,17 @@ const TYPES = {
     id: "CONNECTOR",
     label: "The Connector",
     tagline: "Build the room. Own the relationship.",
-    combo: "Community Builder + Consulting",
-    streams: ["Paid community (membership or subscription)", "Consulting engagements", "Events, workshops, or retreats"],
-    description: "You're at your best when you're bringing people together. Your portfolio career is built around cultivating a community of people who share a problem, an identity, or a goal, with consulting or event work layered on top of the trust that builds inside it. Consulting engagements give you the “anchor” income, while you build out your community.",
+    combo: "Community + Consulting or Coaching",
+    streams: ["Anchor income: Consulting or coaching engagements", "Paid community (membership or subscription)", "Events, workshops, or retreats"],
+    description: "You're at your best when you're bringing people together. Your portfolio career is built around cultivating a community of people who share a problem, an identity, or a goal. Consulting or coaching engagements give you the \"anchor\" income, while you build out your community.",
     forYou: "You're a natural host and connector. You remember people. You make introductions. And you've noticed that the most valuable thing about your career isn't what you know. It's who you know and how you make them feel.",
     energizes: "Bringing people together and being the hub they orbit. Watching connections you made turn into something real.",
     drains: "Isolated, heads-down solo work. Cold, relationship-free transactions with no human thread.",
-    shadow: "You'll give endless value for free and struggle to charge for the room you built. Charge when people would genuinely miss it, not a moment later.",
+    shadow: "You'll give endless value for free and struggle to convert free events to a paid community.",
     timeline: [
-      { when: "Next 90 days", what: "Start a free community and prove people actually want to gather." },
+      { when: "Next 90 days", what: "Decide who your community is for and how it will provide real value. Talk to target community members!" },
       { when: "6 months", what: "Introduce a paid tier once you've proved value and is something people would miss." },
-      { when: "1 year", what: "A self-sustaining community, plus paid consulting engagements as needed." },
+      { when: "1 year", what: "A self-sustaining community, plus paid consulting and coaching engagements as needed." },
     ],
     whyHeldBack: "You undervalue connection because it comes so easily to you. The thing you do effortlessly is exactly the thing others will pay for.",
     nextStep: "Start a free community first (Slack, Substack, WhatsApp). Prove people want to gather. Charge for it when they'd miss it.",
@@ -107,24 +107,24 @@ const TYPES = {
     color: "#573b30",
     emoji: "🔗",
   },
-  FREEAGENT: {
-    id: "FREEAGENT",
-    label: "The Free Agent",
-    tagline: "Maximum variety. Minimum commitments.",
-    combo: "Freelancing + Digital Products",
-    streams: ["Project-based consulting clients (varied)", "A digital product or tool that sells without you", "A retainer client or two for baseline stability"],
-    description: "You want freedom in the most literal sense: different work, different clients, different weeks. Your portfolio career is deliberately non-linear, mixing consulting work that comes in project form with something that generates income when you're not working. You build a life you don't need a vacation from.",
-    forYou: "You get bored with the same client for too long. You love novelty, variety, and the satisfaction of solving a discrete problem and moving on. You're good at a lot of things and you're tired of choosing just one.",
-    energizes: "Variety, novelty, and the satisfaction of solving a discrete problem and moving on. Freedom over your own calendar.",
-    drains: "Long retainers, repetition, and being tied to one client or one identity for too long.",
-    shadow: "You chase novelty over compounding, and the product that would actually free you never gets finished. Protect the time to build the thing that earns without you.",
+  CREATOR: {
+    id: "CREATOR",
+    label: "The Creator",
+    tagline: "Build an audience. Monetize what you love.",
+    combo: "Content Platform + Multiple Monetization Streams",
+    streams: ["A content channel you own (newsletter, podcast, YouTube, or social)", "Brand partnerships, sponsorships, or affiliate income", "Digital products, paid community, or memberships"],
+    description: "You want to build something in public — and get paid for it. Your portfolio career is built around a content channel you own, with multiple monetization streams that grow alongside your audience. The goal isn't one viral moment. It's compounding: every piece of content you publish makes the next one more valuable.",
+    forYou: "You have ideas you want to share and ultimately want to scale your impact to more people.",
+    energizes: "Seeing your content reach people you've never met. Building something that earns while you sleep. Having a platform that's genuinely yours.",
+    drains: "Client work with no creative control. Being paid for your time instead of your ideas. Doing work that disappears the moment you stop showing up.",
+    shadow: "Chasing trends and platform algorithms instead of building something that compounds. Consistency over time matters more than any single piece of content.",
     timeline: [
-      { when: "Next 90 days", what: "Land two or three short consulting projects for cash flow and breathing room." },
-      { when: "6 months", what: "Use the breathing room to build a product from problems you keep solving manually." },
-      { when: "1 year", what: "A varied client mix plus a product earning quietly in the background." },
+      { when: "Next 90 days", what: "Pick one long-form piece of content you OWN (e.g. newsletter or podcast), one social channel (e.g. LinkedIn, Instagram), and one topic you could talk about for years. Publish consistently — 1x a week is okay to start!" },
+      { when: "6 months", what: "Increase your publishing rhythm to 3x per week and set up your first monetization experiment." },
+      { when: "1 year", what: "Multiple income streams tied to your content — partnerships, products, or a paid community." },
     ],
-    whyHeldBack: "You think you have to 'choose one thing.' For you, range isn't indecision, it's the asset. The structure just has to fit it.",
-    nextStep: "Land two or three short consulting projects first. Then use the breathing room to build a digital product from problems you keep solving manually.",
+    whyHeldBack: "You think you need a bigger audience before you can monetize. You don't. The right 1,000 people are worth more than a million passive followers.",
+    nextStep: "Pick your platform and your topic. Commit to 90 days of consistent publishing before you change anything.",
     goFurther: [
       { title: "What if you didn't have to choose one thing?", url: "https://maggieblackburn.beehiiv.com/p/what-if-you-didnt-have-to-choose-one-thing-portfolio-career" },
       { title: "How to experiment your way to a career you actually like", url: "https://maggieblackburn.beehiiv.com/p/how-to-experiment-your-way-to-a-career-you-actually-like" },
@@ -141,96 +141,100 @@ const QUESTIONS = [
     id: 1,
     q: "What does your ideal Monday morning look like?",
     answers: [
-      { text: "I know exactly what I'm doing: there's a clear structure and I can settle in.", types: ["STABILIZER", "EXPERT"] },
-      { text: "I'm deep in a project for someone who really needs what I know.", types: ["EXPERT", "FREEAGENT"] },
-      { text: "I'm creating: writing, filming, designing something for an audience.", types: ["EDUCATOR", "CONNECTOR"] },
-      { text: "I'm in the middle of conversations, connections, or community energy.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "Something completely different from last Monday. Variety is the whole point.", types: ["FREEAGENT", "CONNECTOR"] },
+      { text: "I know exactly what I'm doing — clear structure, stable work, and I can settle in.", types: ["STABILIZER", "EXPERT"] },
+      { text: "I'm deep in work for a client who specifically needs my expertise.", types: ["EXPERT", "CONNECTOR"] },
+      { text: "I'm teaching or coaching — helping someone work through a real challenge.", types: ["EDUCATOR", "STABILIZER"] },
+      { text: "I'm in the middle of conversations, introductions, or building something with people.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "I'm creating — writing, recording, or publishing something for my audience.", types: ["CREATOR", "EDUCATOR"] },
     ],
   },
   {
     id: 2,
     q: "How do you feel about income unpredictability?",
     answers: [
-      { text: "I need a stable baseline. Variable income keeps me anxious.", types: ["STABILIZER", "EXPERT"] },
-      { text: "I'm okay with variation if I have a clear pipeline of clients.", types: ["EXPERT", "CONNECTOR"] },
-      { text: "I want income that doesn't always require me to show up.", types: ["EDUCATOR", "FREEAGENT"] },
-      { text: "Honestly, I'd rather trade predictability for freedom.", types: ["FREEAGENT", "CONNECTOR"] },
+      { text: "I need a reliable baseline — variable income stresses me out more than I want to admit.", types: ["STABILIZER", "EXPERT"] },
+      { text: "I can handle variation if I have a clear client pipeline I trust.", types: ["EXPERT", "STABILIZER"] },
+      { text: "I want income tied to the transformation I provide — programs and clients who invest to grow.", types: ["EDUCATOR", "CONNECTOR"] },
+      { text: "I want content and products to generate income whether or not I show up that day.", types: ["CREATOR", "EDUCATOR"] },
+      { text: "I'm okay with unpredictability as long as I have strong relationships and referrals.", types: ["CONNECTOR", "STABILIZER"] },
     ],
   },
   {
     id: 3,
     q: "Your favorite way to help someone is...",
     answers: [
-      { text: "One-on-one, closely, over time. Real depth with real people.", types: ["EXPERT", "STABILIZER"] },
-      { text: "In a group. I love the energy when many people are learning together.", types: ["EDUCATOR", "CONNECTOR"] },
-      { text: "By creating something they can use on their own terms, anytime.", types: ["FREEAGENT", "EDUCATOR"] },
-      { text: "By building the space where people help each other.", types: ["CONNECTOR", "STABILIZER"] },
+      { text: "One-on-one, over time. Real depth with real people I know well.", types: ["EXPERT", "STABILIZER"] },
+      { text: "In a group — the energy when people learn and grow together is unmatched.", types: ["EDUCATOR", "CONNECTOR"] },
+      { text: "Through content or products they can use on their own terms, anytime.", types: ["CREATOR", "EDUCATOR"] },
+      { text: "By making the right introduction or building the room where the right people meet.", types: ["CONNECTOR", "EXPERT"] },
+      { text: "By being a steady, trusted sounding board — someone they can reliably count on.", types: ["STABILIZER", "CONNECTOR"] },
     ],
   },
   {
     id: 4,
     q: "What's your relationship with content creation?",
     answers: [
-      { text: "I love it. Sharing ideas online feels natural and genuinely fun.", types: ["EDUCATOR", "STABILIZER"] },
-      { text: "I'd do it if it helped bring in clients, but it's not my priority.", types: ["EXPERT", "STABILIZER"] },
-      { text: "I create things, but I'd rather sell them than post about them.", types: ["STABILIZER", "FREEAGENT"] },
-      { text: "I love content specifically when it's for a community I care about.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "It's central to my plan — building an audience online is how I'll grow.", types: ["CREATOR", "EDUCATOR"] },
+      { text: "I'd use it to attract clients, but referrals and relationships are my real engine.", types: ["EXPERT", "STABILIZER"] },
+      { text: "I like it for credibility, but I'm not trying to become an influencer.", types: ["STABILIZER", "CONNECTOR"] },
+      { text: "I love it when it's in service of a community I'm genuinely invested in building.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "I see it as my teaching medium — content is how I share my methodology at scale.", types: ["EDUCATOR", "CREATOR"] },
     ],
   },
   {
     id: 5,
     q: "When you imagine your working life 2 years from now, what stands out most?",
     answers: [
-      { text: "I've built a real income stream alongside my job that gives me options.", types: ["STABILIZER", "EXPERT"] },
-      { text: "I've built something with an audience. People follow what I create.", types: ["EDUCATOR", "STABILIZER"] },
-      { text: "I'm the person people refer to when they have a specific problem to solve.", types: ["EXPERT", "FREEAGENT"] },
-      { text: "I've built a community people would be devastated to lose access to.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "I have income coming in from multiple directions, and my calendar is mine.", types: ["FREEAGENT", "EDUCATOR"] },
+      { text: "I've built a stable income stream alongside my job that gives me real options.", types: ["STABILIZER", "EXPERT"] },
+      { text: "I have a small number of high-trust clients who rely on me for serious ongoing work.", types: ["EXPERT", "CONNECTOR"] },
+      { text: "I'm running coaching or group programs — people pay me to teach what I know.", types: ["EDUCATOR", "STABILIZER"] },
+      { text: "I've built a community people couldn't imagine losing.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "I've built a real audience — people follow my content and I monetize it in multiple ways.", types: ["CREATOR", "EDUCATOR"] },
     ],
   },
   {
     id: 6,
-    q: "How do you feel about selling your services?",
+    q: "How do you feel about selling your services or products?",
     answers: [
-      { text: "I prefer content or community to do the heavy lifting. Inbound all the way.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "I like 1:1 conversations. Selling feels honest when I know I can help.", types: ["EXPERT", "STABILIZER"] },
-      { text: "I want systems and products that sell so I don't have to pitch constantly.", types: ["STABILIZER", "FREEAGENT"] },
-      { text: "I like short outreach bursts when I have space, not ongoing sales.", types: ["FREEAGENT", "CONNECTOR"] },
+      { text: "I like 1:1 conversations — selling feels honest when I know I can genuinely help.", types: ["EXPERT", "STABILIZER"] },
+      { text: "I want programs and systems that sell themselves — structure over constant hustle.", types: ["STABILIZER", "EDUCATOR"] },
+      { text: "I prefer being pulled in by referrals and trust, not pitching cold.", types: ["CONNECTOR", "EXPERT"] },
+      { text: "I want my content to do the selling — I'd rather publish than pitch.", types: ["CREATOR", "CONNECTOR"] },
+      { text: "I love when my students' results sell for me — transformation speaks louder than outreach.", types: ["EDUCATOR", "CREATOR"] },
     ],
   },
   {
     id: 7,
     q: "Complete the sentence: 'The thing I want most from my work is...'",
     answers: [
-      { text: "...to prove I can earn outside of my job before I make any big moves.", types: ["STABILIZER", "EXPERT"] },
-      { text: "...security AND self-expression. Both. Not one or the other.", types: ["STABILIZER", "EXPERT"] },
-      { text: "...to be recognized as the go-to person in my space.", types: ["EXPERT", "EDUCATOR"] },
-      { text: "...to reach a lot of people without trading more hours for it.", types: ["EDUCATOR", "FREEAGENT"] },
-      { text: "...to build something that feels like mine and brings people together.", types: ["CONNECTOR", "STABILIZER"] },
-      { text: "...the freedom to keep changing what I do and who I do it for.", types: ["FREEAGENT", "CONNECTOR"] },
+      { text: "...the security to build something on the side without risking everything.", types: ["STABILIZER", "CONNECTOR"] },
+      { text: "...to be the trusted expert people call when something important comes up.", types: ["EXPERT", "STABILIZER"] },
+      { text: "...to help people transform and build a repeatable business around that transformation.", types: ["EDUCATOR", "EXPERT"] },
+      { text: "...to build a room full of the right people and be the reason they know each other.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "...to build an audience around my ideas and get paid for my perspective.", types: ["CREATOR", "CONNECTOR"] },
+      { text: "...security AND creative expression. I don't want to choose between them.", types: ["STABILIZER", "CREATOR"] },
     ],
   },
   {
     id: 8,
     q: "Where are you right now?",
     answers: [
-      { text: "Employed full-time and curious about what else is possible.", types: ["STABILIZER", "CONNECTOR"] },
-      { text: "Employed, but creatively restless. I need an outlet.", types: ["STABILIZER", "EDUCATOR"] },
-      { text: "Already freelancing or consulting, and I want more stability and leverage.", types: ["EXPERT", "FREEAGENT"] },
-      { text: "Self-employed and trying to scale beyond trading hours for money.", types: ["EDUCATOR", "FREEAGENT"] },
-      { text: "Between things, rethinking how I want to work entirely.", types: ["FREEAGENT", "CONNECTOR"] },
+      { text: "Employed full-time and curious about what else might be possible.", types: ["STABILIZER", "CONNECTOR"] },
+      { text: "Employed but creatively restless — I want to build something that reaches people.", types: ["CREATOR", "STABILIZER"] },
+      { text: "Already consulting or freelancing and looking to build more leverage and income.", types: ["EXPERT", "CONNECTOR"] },
+      { text: "Running my own business and trying to scale without just adding more hours.", types: ["EDUCATOR", "EXPERT"] },
+      { text: "Investing my energy in building relationships and community — that's where my focus is.", types: ["CONNECTOR", "EDUCATOR"] },
     ],
   },
   {
     id: 9,
     q: "What drains you fastest at work?",
     answers: [
-      { text: "Uncertainty about whether the money is actually coming in.", types: ["STABILIZER", "EXPERT"] },
-      { text: "Shallow, transactional work with no real depth.", types: ["EXPERT", "EDUCATOR"] },
-      { text: "Doing the same thing for the same client, month after month.", types: ["FREEAGENT", "CONNECTOR"] },
-      { text: "Working alone, with no people energy around me.", types: ["CONNECTOR", "EDUCATOR"] },
-      { text: "Constant selling and self-promotion.", types: ["EXPERT", "STABILIZER"] },
+      { text: "Uncertainty about income — I need to know the money is actually coming in.", types: ["STABILIZER", "EXPERT"] },
+      { text: "Shallow or generic work where I can't go deep or use my real expertise.", types: ["EXPERT", "EDUCATOR"] },
+      { text: "Repeating myself one-to-one with no way to reach or impact more people.", types: ["EDUCATOR", "CREATOR"] },
+      { text: "Working in isolation — I need people energy, relationships, and real connection.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "Creating work that disappears — no audience, no ownership, nothing that compounds.", types: ["CREATOR", "CONNECTOR"] },
     ],
   },
   {
@@ -238,11 +242,11 @@ const QUESTIONS = [
     q: "What's the hardest challenge you're facing right now?",
     answers: [
       { text: "Finding clients or customers consistently.", types: ["STABILIZER", "EXPERT"] },
-      { text: "Positioning myself — I'm not sure how to explain what I do.", types: ["FREEAGENT", "STABILIZER"] },
-      { text: "Choosing what to start — there are too many options.", types: ["STABILIZER", "FREEAGENT"] },
-      { text: "Selling myself. I know I'm good but struggle to put a price on it.", types: ["EXPERT", "EDUCATOR"] },
-      { text: "Building an audience or getting visible enough to attract opportunities.", types: ["EDUCATOR", "CONNECTOR"] },
-      { text: "Staying consistent while juggling everything else in my life.", types: ["STABILIZER", "CONNECTOR"] },
+      { text: "Positioning — I'm not sure how to explain what I do or charge what I'm worth.", types: ["EXPERT", "CONNECTOR"] },
+      { text: "Building and launching a scalable offer or program I can teach repeatedly.", types: ["EDUCATOR", "STABILIZER"] },
+      { text: "Growing and monetizing a community that people genuinely value.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "Building an audience and getting visible enough to attract real opportunities.", types: ["CREATOR", "STABILIZER"] },
+      { text: "Staying consistent — I start things but struggle to maintain momentum over time.", types: ["CREATOR", "CONNECTOR"] },
     ],
   },
 ];
@@ -250,7 +254,7 @@ const QUESTIONS = [
 // ─── Scoring ─────────────────────────────────────────────────────────────────
 
 // Deterministic tie-break order when scores are equal
-const PRIORITY = ["STABILIZER", "EXPERT", "EDUCATOR", "CONNECTOR", "FREEAGENT"];
+const PRIORITY = ["STABILIZER", "EXPERT", "EDUCATOR", "CONNECTOR", "CREATOR"];
 
 function getResult(answers) {
   const scores = Object.keys(TYPES).reduce((a, k) => ({ ...a, [k]: 0 }), {});
@@ -304,7 +308,7 @@ function TypeIcon({ id, color, size = 26 }) {
       return (<svg {...common}><path d="M4 20h4L19 9a2 2 0 0 0-3-3L5 17v3Z" /><path d="M14 7l3 3" /></svg>);
     case "CONNECTOR": // connected nodes
       return (<svg {...common}><circle cx="6" cy="6" r="2.5" /><circle cx="18" cy="6" r="2.5" /><circle cx="12" cy="18" r="2.5" /><path d="M8 7.5 16 16M16 7.5 8 16M8 6h8" /></svg>);
-    case "FREEAGENT": // paper plane
+    case "CREATOR": // paper plane
       return (<svg {...common}><path d="M21 3 3 11l7 3 3 7 8-18Z" /><path d="M10 14l4-4" /></svg>);
     default:
       return null;
@@ -778,8 +782,17 @@ function Question({ question, qIndex, total, selected, onSelect, onNext, onBack 
             lineHeight: 1.15,
             textAlign: "center",
             color: OUTLINE,
-            margin: "0 0 clamp(24px, 4vw, 40px)",
+            margin: "0 0 10px",
           }}>{question.q}</h2>
+          <p style={{
+            fontFamily: SANS,
+            fontSize: "12px",
+            fontWeight: 400,
+            color: "#8a7060",
+            textAlign: "center",
+            margin: `0 0 clamp(20px, 3.5vw, 36px)`,
+            letterSpacing: "0.01em",
+          }}>If two feel equally true, pick the one that energizes you more on a hard week.</p>
 
           <div style={{
             display: "grid",
@@ -1194,22 +1207,6 @@ function Result({ result, firstName, onRetake, onExplore }) {
       </div>
 
       <div style={S.ctaWrap}>
-        <p style={{ ...SERIF_STYLE, fontSize: "22px", fontWeight: 400, color: TEXT, marginBottom: "18px", lineHeight: 1.4 }}>
-          {name ? `${name}, want` : "Want"} help designing your specific version of this?
-        </p>
-        <button
-          style={{
-            ...S.btn(t.color),
-            boxShadow: hover ? `0 6px 28px ${t.color}44` : "none",
-            transform: hover ? "translateY(-2px)" : "none",
-          }}
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          onClick={() => window.open("https://calendly.com/maggieblackburn/free-career-strategy-call", "_blank", "noopener,noreferrer")}
-        >
-          Book a Free Career Strategy Call →
-        </button>
-        <p style={S.ctaSub}>Not sure yet?</p>
         <button style={{ ...S.ghost, display: "block", margin: "0 auto" }} onClick={onRetake}>
           Retake the quiz
         </button>
