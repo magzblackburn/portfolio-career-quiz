@@ -212,7 +212,6 @@ const QUESTIONS = [
       { text: "...to help people transform and build a repeatable business around that transformation.", types: ["EDUCATOR", "EXPERT"] },
       { text: "...to build a room full of the right people and be the reason they know each other.", types: ["CONNECTOR", "EDUCATOR"] },
       { text: "...to build an audience around my ideas and get paid for my perspective.", types: ["CREATOR", "CONNECTOR"] },
-      { text: "...security AND creative expression. I don't want to choose between them.", types: ["STABILIZER", "CREATOR"] },
     ],
   },
   {
