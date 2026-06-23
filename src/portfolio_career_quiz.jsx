@@ -141,7 +141,7 @@ const QUESTIONS = [
     id: 1,
     q: "What does your ideal Monday morning look like?",
     answers: [
-      { text: "I know exactly what I'm doing—clear structure, stable work, and I can settle in.", types: ["STABILIZER", "EXPERT"] },
+      { text: "I'm working on a team at a company I believe in.", types: ["STABILIZER", "EXPERT"] },
       { text: "I'm deep in work for a client who specifically needs my expertise.", types: ["EXPERT", "CONNECTOR"] },
       { text: "I'm teaching or coaching—helping someone work through a real challenge.", types: ["EDUCATOR", "STABILIZER"] },
       { text: "I'm in the middle of conversations, introductions, or building something with people.", types: ["CONNECTOR", "EDUCATOR"] },
