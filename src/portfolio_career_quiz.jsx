@@ -245,7 +245,6 @@ const QUESTIONS = [
       { text: "Building and launching a scalable offer or program I can teach repeatedly.", types: ["EDUCATOR", "STABILIZER"] },
       { text: "Growing and monetizing a community that people genuinely value.", types: ["CONNECTOR", "EDUCATOR"] },
       { text: "Building an audience and getting visible enough to attract real opportunities.", types: ["CREATOR", "STABILIZER"] },
-      { text: "Staying consistent—I start things but struggle to maintain momentum over time.", types: ["CREATOR", "CONNECTOR"] },
     ],
   },
 ];
