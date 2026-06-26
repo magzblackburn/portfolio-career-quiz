@@ -9,6 +9,8 @@ const TYPES = {
   STABILIZER: {
     id: "STABILIZER",
     label: "The Stabilizer",
+    recognition: "You want to build something that's yours — but not at the cost of the stability that lets you breathe. You're not looking to quit your job tomorrow. You're looking to make sure all your income doesn't depend on one company.",
+    hook: "Build something on the side. Keep your safety net.",
     tagline: "Anchored income. Freedom to build on the side.",
     combo: "Anchor Income + Service-Based Offer",
     streams: ["A reliable anchor: full-time employment with enough money to give you breathing room", "A service-based offer: targeting who you want to help, building off your current skills and experience", "Client income as it grows"],
@@ -35,6 +37,8 @@ const TYPES = {
   EXPERT: {
     id: "EXPERT",
     label: "The Advisor",
+    recognition: "People already come to you when things get hard. You're the person who gets called by name — not because of a job title, but because of what you actually know. You want to get paid properly for that, on your own terms.",
+    hook: "Your expertise is the business. You just need the right container for it.",
     tagline: "Deep work. High trust. Premium relationships.",
     combo: "High-Trust Client Work + 1:1 Advising",
     streams: ["Your anchor income: Fractional, consulting, or freelance retainers", "1:1 advising or coaching clients", "Occasional advisory days or speaking as you grow"],
@@ -60,6 +64,8 @@ const TYPES = {
   EDUCATOR: {
     id: "EDUCATOR",
     label: "The Educator",
+    recognition: "You've explained something to someone and watched it click — and that feeling is what you want to build your work around. You want to help more people, but you can't keep doing it one conversation at a time forever.",
+    hook: "Teach what you know. Build a business around the transformation.",
     tagline: "Teach what you know. Scale what works.",
     combo: "1:1 Coaching or Mentoring + Group Programs",
     streams: ["Your anchor income / premium offer: 1:1 coaching, mentoring, or advising", "Your signature offer: Group cohort, workshop, or mastermind launches", "Content or community to build your audience over time"],
@@ -85,6 +91,8 @@ const TYPES = {
   CONNECTOR: {
     id: "CONNECTOR",
     label: "The Connector",
+    recognition: "The most valuable thing you bring to any room isn't what you know — it's who you know and how you make people feel when they're in it. You want to build something around that gift, not just keep giving it away for free.",
+    hook: "Build the room. Own the relationship.",
     tagline: "Build the room. Own the relationship.",
     combo: "Community + Consulting or Coaching",
     streams: ["Anchor income: Consulting or coaching engagements", "Paid community (membership or subscription)", "Events, workshops, or retreats"],
@@ -110,6 +118,8 @@ const TYPES = {
   CREATOR: {
     id: "CREATOR",
     label: "The Creator",
+    recognition: "You have ideas worth sharing and an audience worth building. You'd rather reach thousands of people with your perspective than trade hours for money in a one-to-one model. You want a platform that compounds over time.",
+    hook: "Build an audience. Get paid for your perspective.",
     tagline: "Build an audience. Monetize what you love.",
     combo: "Content Platform + Multiple Monetization Streams",
     streams: ["A content channel you own (newsletter, podcast, YouTube, or social)", "Brand partnerships, sponsorships, or affiliate income", "Digital products, paid community, or memberships"],
@@ -1046,8 +1056,10 @@ function Result({ result, firstName, onRetake, onExplore }) {
       <div id="result-pdf-content">
       <div style={{ marginBottom: "14px" }}><TypeIcon id={t.id} color={t.color} size={48} /></div>
       <div style={S.resultType(t.color)}>Your Portfolio Career Type</div>
+      <p style={{ ...S.bodyText, fontStyle: "italic", marginBottom: "24px" }}>{t.recognition}</p>
       <h2 style={S.resultTitle}>{t.label}</h2>
-      <p style={S.resultTagline}>{t.tagline}</p>
+      <p style={{ ...S.resultTagline, fontWeight: 500, color: t.color, marginBottom: "4px" }}>{t.hook}</p>
+      <p style={{ ...S.resultTagline, opacity: 0.7, marginBottom: "16px" }}>{t.tagline}</p>
 
       {/* Primary + secondary blend */}
       <div style={{
