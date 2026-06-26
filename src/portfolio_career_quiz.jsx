@@ -160,6 +160,17 @@ const QUESTIONS = [
   },
   {
     id: 2,
+    q: "Where are you right now in your portfolio career journey?",
+    answers: [
+      { text: "Employed full-time and curious about earning income on the side.", types: ["STABILIZER", "EDUCATOR"] },
+      { text: "Employed full-time and actively building something on the side.", types: ["STABILIZER", "CREATOR"] },
+      { text: "Self-employed and looking to build additional income streams using my expertise.", types: ["EXPERT", "CONNECTOR"] },
+      { text: "Self-employed and trying to scale without just adding more hours.", types: ["EDUCATOR", "CONNECTOR"] },
+      { text: "Laid off or in-between things and trying to figure out what's next.", types: ["EXPERT", "STABILIZER"] },
+    ],
+  },
+  {
+    id: 3,
     q: "How do you feel about income unpredictability?",
     answers: [
       { text: "I need a reliable baseline—variable income stresses me out more than I want to admit.", types: ["STABILIZER", "EXPERT"] },
@@ -170,7 +181,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     q: "Your favorite way to help someone is...",
     answers: [
       { text: "One-on-one, over time. Real depth with real people I know well.", types: ["EXPERT", "STABILIZER"] },
@@ -181,7 +192,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     q: "What's your relationship with content creation?",
     answers: [
       { text: "It's central to my plan—building an audience online is how I'll grow.", types: ["CREATOR", "EDUCATOR"] },
@@ -192,7 +203,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     q: "When you imagine your working life 2 years from now, what stands out most?",
     answers: [
       { text: "I've built a stable income stream alongside my job that gives me real options.", types: ["STABILIZER", "EXPERT"] },
@@ -203,7 +214,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     q: "How do you feel about selling your services or products?",
     answers: [
       { text: "I like 1:1 conversations—selling feels honest when I know I can genuinely help.", types: ["EXPERT", "STABILIZER"] },
@@ -214,7 +225,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     q: "Complete the sentence: 'The thing I want most from my work is...'",
     answers: [
       { text: "...the security to build something on the side without risking everything.", types: ["STABILIZER", "CONNECTOR"] },
@@ -222,17 +233,6 @@ const QUESTIONS = [
       { text: "...to help people transform and build a repeatable business around that transformation.", types: ["EDUCATOR", "EXPERT"] },
       { text: "...to build a room full of the right people and be the reason they know each other.", types: ["CONNECTOR", "EDUCATOR"] },
       { text: "...to build an audience around my ideas and get paid for my perspective.", types: ["CREATOR", "CONNECTOR"] },
-    ],
-  },
-  {
-    id: 8,
-    q: "Where are you right now?",
-    answers: [
-      { text: "Employed full-time and curious about what else might be possible.", types: ["STABILIZER", "CONNECTOR"] },
-      { text: "Employed but creatively restless—I want to build something that reaches people.", types: ["CREATOR", "STABILIZER"] },
-      { text: "Already consulting or freelancing and looking to build more leverage and income.", types: ["EXPERT", "CONNECTOR"] },
-      { text: "Running my own business and trying to scale without just adding more hours.", types: ["EDUCATOR", "EXPERT"] },
-      { text: "Investing my energy in building relationships and community—that's where my focus is.", types: ["CONNECTOR", "EDUCATOR"] },
     ],
   },
   {
