@@ -1049,9 +1049,6 @@ function Result({ result, firstName, onRetake, onExplore }) {
   return (
     <div style={S.card}>
       <div id="result-pdf-content">
-      <div style={{ marginBottom: "14px" }}><TypeIcon id={t.id} color={t.color} size={48} /></div>
-      <div style={S.resultType(t.color)}>Your Portfolio Career Type</div>
-      <p style={{ ...S.bodyText, fontStyle: "italic", marginBottom: "24px" }}>{t.recognition}</p>
       <h2 style={S.resultTitle}>{t.label}</h2>
       <p style={S.resultTagline}>{t.tagline}</p>
 
@@ -1073,6 +1070,8 @@ function Result({ result, firstName, onRetake, onExplore }) {
         <button onClick={onExplore} style={{ fontWeight: 500, color: s.color, background: "none", border: "none", padding: 0, cursor: "pointer", fontFamily: "inherit", fontSize: "inherit", textDecoration: "underline" }}>{s.label}</button>.
         {" "}When the two pull in different directions, lead with your {t.label} instincts.
       </div>
+
+      <p style={{ ...S.bodyText, fontStyle: "italic", margin: "20px 0 0" }}>{t.recognition}</p>
 
       <div style={S.divider(t.color)} />
 
