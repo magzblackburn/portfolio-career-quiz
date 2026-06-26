@@ -177,7 +177,7 @@ const QUESTIONS = [
       { text: "It's central to my plan—building an audience online is how I'll grow.", types: ["CREATOR", "EDUCATOR"] },
       { text: "I'd use it to attract clients, but referrals and relationships are my real engine.", types: ["EXPERT", "STABILIZER"] },
       { text: "I haven't done much yet, but I can see the value and I'd like to start building something.", types: ["STABILIZER", "CREATOR"] },
-      { text: "I love it when it's in service of a community I'm genuinely invested in building.", types: ["CONNECTOR", "EDUCATOR"] },
+      { text: "I create content so I can build a community of like-minded people.", types: ["CONNECTOR", "EDUCATOR"] },
       { text: "I see it as my teaching medium—content is how I share my methodology at scale.", types: ["EDUCATOR", "CREATOR"] },
     ],
   },
