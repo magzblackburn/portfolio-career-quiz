@@ -1049,7 +1049,10 @@ function Result({ result, firstName, onRetake, onExplore }) {
   return (
     <div style={S.card}>
       <div id="result-pdf-content">
-      <h2 style={S.resultTitle}>{t.label}</h2>
+      <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "8px" }}>
+        <TypeIcon id={t.id} color={t.color} size={40} />
+        <h2 style={{ ...S.resultTitle, margin: 0 }}>{t.label}</h2>
+      </div>
       <p style={S.resultTagline}>{t.tagline}</p>
 
       {/* Primary + secondary blend */}
