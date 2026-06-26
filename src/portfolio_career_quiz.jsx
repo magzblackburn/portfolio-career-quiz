@@ -1070,7 +1070,7 @@ function Result({ result, firstName, onRetake, onExplore }) {
       }}>
         Your primary archetype is <strong style={{ fontWeight: 500, color: t.color }}>{t.label}</strong>
         {" "}with your secondary archetype as{" "}
-        <strong style={{ fontWeight: 500, color: s.color }}>{s.label}</strong>.
+        <button onClick={onExplore} style={{ fontWeight: 500, color: s.color, background: "none", border: "none", padding: 0, cursor: "pointer", fontFamily: "inherit", fontSize: "inherit", textDecoration: "underline" }}>{s.label}</button>.
         {" "}When the two pull in different directions, lead with your {t.label} instincts.
       </div>
 
