@@ -1242,8 +1242,6 @@ function Result({ result, firstName, q2Answer, onRetake, onExplore }) {
         {blendText && <><br /><br />{blendText}</>}
       </div>
 
-      <p style={{ ...S.bodyText, fontStyle: "italic", margin: "20px 0 0" }}>{t.recognition}</p>
-
       <PieChart scores={result.scores} />
 
       <div style={S.divider(t.color)} />
