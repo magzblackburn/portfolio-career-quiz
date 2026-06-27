@@ -9,7 +9,7 @@ const TYPES = {
   STABILIZER: {
     id: "STABILIZER",
     label: "The Stabilizer",
-    recognition: "You want to build something that's yours — but not at the cost of the stability that lets you breathe. You're not looking to quit your job tomorrow. You're looking to make sure all your income doesn't depend on one company.",
+    recognition: "You want to build something that's yours—but not at the cost of the stability that lets you breathe. You're not looking to quit your job tomorrow. You're looking to make sure all your income doesn't depend on one company.",
     tagline: "Anchored income. Freedom to build on the side.",
     combo: "Anchor Income + Service-Based Offer",
     streams: ["A reliable anchor: full-time employment with enough money to give you breathing room", "A service-based offer: targeting who you want to help, building off your current skills and experience", "Client income as it grows"],
@@ -36,7 +36,7 @@ const TYPES = {
   EXPERT: {
     id: "EXPERT",
     label: "The Advisor",
-    recognition: "People already come to you when things get hard. You're the person who gets called by name — not because of a job title, but because of what you actually know. You want to get paid properly for that, on your own terms.",
+    recognition: "People already come to you when things get hard. You're the person who gets called by name—not because of a job title, but because of what you actually know. You want to get paid properly for that, on your own terms.",
     tagline: "Deep work. High trust. Premium relationships.",
     combo: "High-Trust Client Work + 1:1 Advising",
     streams: ["Your anchor income: Fractional, consulting, or freelance retainers", "1:1 advising or coaching clients", "Occasional advisory days or speaking as you grow"],
@@ -62,7 +62,7 @@ const TYPES = {
   EDUCATOR: {
     id: "EDUCATOR",
     label: "The Educator",
-    recognition: "You've explained something to someone and watched it click — and that feeling is what you want to build your work around. You want to help more people, but you can't keep doing it one conversation at a time forever.",
+    recognition: "You've explained something to someone and watched it click—and that feeling is what you want to build your work around. You want to help more people, but you can't keep doing it one conversation at a time forever.",
     tagline: "Teach what you know. Scale what works.",
     combo: "1:1 Coaching or Mentoring + Group Programs",
     streams: ["Your anchor income / premium offer: 1:1 coaching, mentoring, or advising", "Your signature offer: Group cohort, workshop, or mastermind launches", "Content or community to build your audience over time"],
@@ -88,7 +88,7 @@ const TYPES = {
   CONNECTOR: {
     id: "CONNECTOR",
     label: "The Connector",
-    recognition: "The most valuable thing you bring to any room isn't what you know — it's who you know and how you make people feel when they're in it. You want to build something around that gift, not just keep giving it away for free.",
+    recognition: "The most valuable thing you bring to any room isn't what you know—it's who you know and how you make people feel when they're in it. You want to build something around that gift, not just keep giving it away for free.",
     tagline: "Build the room. Own the relationship.",
     combo: "Community + Consulting or Coaching",
     streams: ["Anchor income: Consulting or coaching engagements", "Paid community (membership or subscription)", "Events, workshops, or retreats"],
@@ -316,6 +316,169 @@ function TypeIcon({ id, color, size = 26 }) {
     default:
       return null;
   }
+}
+
+// ─── Blend descriptions (primary:secondary × employment situation) ────────────
+// Q2 answers 0–1 = employed, 2–3 = selfEmployed, 4 = inBetween
+const BLENDS = {
+  "STABILIZER:EXPERT": {
+    employed:     "Your day job gives you the financial floor that most advisors don't have when starting out. That security lets you be selective—you don't need every client to say yes, which makes the clients who do trust you more. Build your advisory practice on the side while your salary buys you the time to do it right.",
+    selfEmployed: "You're already in the market with your expertise. The move is to raise your rates, get more selective, and lean into depth over volume. Your advisory practice doesn't need more hustle—it needs more trust.",
+    inBetween:    "Being in transition is actually a useful moment to reframe your expertise. You're not looking for a new job—you're building an advisory practice. Identify the two or three problems you're uniquely qualified to solve and start reaching out to the people who have them.",
+  },
+  "STABILIZER:EDUCATOR": {
+    employed:     "Use your employment as the financial runway to experiment with a small cohort or 1:1 clients before you bet everything on a program. Build the methodology on the side, prove it works, then decide what you want to do next.",
+    selfEmployed: "You have flexibility but also the pressure of making it all work. Build your teaching offers alongside your existing client work—start small, beta test, and let the revenue from teaching eventually reduce your dependence on hourly delivery.",
+    inBetween:    "This is actually a great time to launch a teaching experiment. You have time, you have clarity on what you know, and you don't have a schedule that crowds out the deep work of building a program. Talk to potential students, define your methodology, and run a small beta.",
+  },
+  "STABILIZER:CONNECTOR": {
+    employed:     "Your day job is actually an asset for community building—you're not desperate for events or a thriving community to pay your bills, which means you can build it with real generosity and patience. Most people rush to monetize. You can afford to prove the value first.",
+    selfEmployed: "The community doesn't need to be a separate business immediately—it can be the network that feeds your consulting, deepens your relationships, and eventually becomes a revenue stream in its own right. Build it with the long game in mind.",
+    inBetween:    "Focus on securing anchor income first, but also realize that being in transition gives you a rare amount of time and energy to invest in bringing people together. Start a small version of a community now, while you have the bandwidth to give it real attention.",
+  },
+  "STABILIZER:CREATOR": {
+    employed:     "Your salary is the best creative investment you have right now. You can publish, experiment, and find your voice without needing your content to immediately pay your bills. Most creators plateau because they need every post to perform—you don't. Use that freedom.",
+    selfEmployed: "You're building an audience alongside your existing income, which gives you more patience than pure creators who need to monetize fast. The audience you build becomes an asset that complements and eventually amplifies your other income streams.",
+    inBetween:    "You have time and a clear reason to build something in public. Start creating now—not when you feel ready, but while this transition gives you the bandwidth to do it consistently. The platform you build over the next 90 days will be an asset no matter what comes next.",
+  },
+  "EXPERT:STABILIZER": {
+    employed:     "You're a deep expert who values the security of reliable income too—that's not a contradiction, it's smart positioning. Your advisory practice can grow alongside your job, and the fact that you don't need every client to say yes makes you more attractive to the ones who matter.",
+    selfEmployed: "You're already advising and consulting, and you're looking for a more stable baseline underneath the variable income. Consider building in one or two retainers—clients who engage you on a predictable monthly basis—to smooth out the peaks and valleys.",
+    inBetween:    "This transition is your moment to package your expertise into a consulting offer and bring it to market while you have the time to do it thoughtfully. You don't need a job right now—you need two or three clients who value what you know. Start there.",
+  },
+  "EXPERT:EDUCATOR": {
+    employed:     "Your advisory instincts mean your programs will be grounded in real expertise, not just theory. Let your day job fund the early experiments while you build the framework that will eventually make your teaching scalable. Your 1:1 advisory clients will be your first beta students.",
+    selfEmployed: "Your teaching and advisory work are natural complements—your advisory clients deepen your teaching, and your programs generate interest in your advisory work. Make sure you're designing them to work together, not compete for your time.",
+    inBetween:    "You have deep expertise and you know how to explain it. Use this window to build both lanes simultaneously—reach out to potential advisory clients while designing a small teaching experiment. The two will reinforce each other faster than you expect.",
+  },
+  "EXPERT:CONNECTOR": {
+    employed:     "Use your current role and network to start making introductions and hosting conversations—without it needing to be a formal business yet. The reputation you build now becomes the pipeline for your advisory practice later.",
+    selfEmployed: "You're already in motion, and your network is one of your biggest assets. The move is to be intentional about turning your natural connector instincts into a formal advantage—a community, a roundtable, a curated network—that keeps the right people close and generates advisory work organically.",
+    inBetween:    "Your network is your most valuable asset right now. This is a moment to be deliberately generous with it—make introductions, host conversations, show up for people—because the advisory opportunities that come out of genuine connection are always better than the ones that come from pitching cold.",
+  },
+  "EXPERT:CREATOR": {
+    employed:     "You have expertise and a stable income base—that's the perfect setup to start creating content that positions you as a thought leader without needing it to immediately pay off. Your content and your advisory work are one pitch: here's what I know, here's why it matters, here's how I can help.",
+    selfEmployed: "Your content and your advisory practice should be one machine. What you publish establishes what you know; your clients deepen it. Build a content habit—even a small one—and let it work on your behalf while you're doing client work.",
+    inBetween:    "Creating content during a career transition is one of the highest-leverage things you can do. It builds your positioning, attracts inbound opportunities, and gives you something to point to when you reach out to potential clients. Start before you feel ready.",
+  },
+  "EDUCATOR:STABILIZER": {
+    employed:     "Use the stability to run a beta cohort, sharpen your methodology, and prove the model before it needs to pay your bills. You're not in a rush—and not being in a rush is how you build a teaching practice that actually works.",
+    selfEmployed: "The stability you're looking for comes from recurring program revenue, not more clients. Building a teaching practice that generates predictable cohort income will give you the floor you need without adding more hours to your calendar.",
+    inBetween:    "This transition might feel unstable, but it's actually an opportunity to build the teaching practice you've been putting off. You have time to develop your methodology, find your first students, and run a beta cohort while you figure out what comes next.",
+  },
+  "EDUCATOR:EXPERT": {
+    employed:     "Your advisory instincts will ground your teaching in real expertise. Let your day job fund the early experiments—take on a handful of 1:1 clients, refine your framework, then package what you keep repeating into a group program.",
+    selfEmployed: "Your advisory clients are your best source of curriculum. What do they keep asking you? What do you keep explaining? That's your program. Build the teaching around the advisory work you're already doing.",
+    inBetween:    "You have deep expertise and you know how to pass it on. Use this window to build both lanes—reach out to potential advisory clients and design your first cohort in parallel. You don't need to choose between teaching and advising.",
+  },
+  "EDUCATOR:CONNECTOR": {
+    employed:     "You teach and you connect people—and right now your job means you can experiment with both without pressure. Start with a small cohort or community event. See which format energizes you more, then double down.",
+    selfEmployed: "Your programs will be stronger because of your ability to bring the right people into the room together, and your community will be more valuable because of the depth of what you teach. Build them as one thing, not two.",
+    inBetween:    "You have the bandwidth right now to build something community-driven from scratch. Start with the gathering—a free event, a group conversation—and let the teaching emerge from what the community actually needs.",
+  },
+  "EDUCATOR:CREATOR": {
+    employed:     "Build your content habit first—it's the easiest thing to start while employed—then let it generate the audience that eventually buys your programs. The day job buys you the time to build both without pressure.",
+    selfEmployed: "Your content is your top of funnel and your programs are your offer. The mistake is building programs for an audience you haven't built yet—or creating content without a product to sell. Build both in parallel, even if both are small.",
+    inBetween:    "Build your teaching content library and design your first program at the same time. What you learn creating content will shape your programs, and vice versa. Don't wait for one to be ready before starting the other.",
+  },
+  "CONNECTOR:STABILIZER": {
+    employed:     "You're building relationships and community while your job covers expenses—which is the most patient and therefore most effective way to do it. You're not rushing anyone, and that patience is an asset most community builders simply can't afford.",
+    selfEmployed: "Let the community deepen and amplify your consulting relationships—don't treat it as a separate business yet. The monetization will come naturally once the value is proven.",
+    inBetween:    "Being in between is uncomfortable, but it's also a window to be deliberately generous with your connections. Make introductions. Host a conversation. Start the community before you have a business model for it. The network you build in this season will fund the next one.",
+  },
+  "CONNECTOR:EXPERT": {
+    employed:     "Advisory work will flow from your reputation as a connector. People hire advisors they trust, and trust is built in the room before it's built in a proposal. Keep showing up, keep making introductions, and let the advisory work come to you.",
+    selfEmployed: "You love bringing people together. As a connector, you can build trust easily with people, which makes it easier for you to offer advisory services or make connections to grow your portfolio career.",
+    inBetween:    "Your network is your most immediate asset right now. Make it work for you—reach out, make introductions, show up generously—and you'll find that advisory opportunities emerge from genuine relationships faster than from any pitch.",
+  },
+  "CONNECTOR:EDUCATOR": {
+    employed:     "Your job means you can start a small gathering or teach a workshop to a group you already know without it needing to pay off immediately. Let it be small, real, and low-pressure. That's how you find out what resonates.",
+    selfEmployed: "Your programs will be most effective when they're delivered inside the community you've already built, to people who already trust you. Don't build the product before building the room.",
+    inBetween:    "You have time right now to do both—build the community and design the program simultaneously. Start gathering people, start teaching, and let the two develop each other.",
+  },
+  "CONNECTOR:CREATOR": {
+    employed:     "Your job means neither the content nor the community has to generate income immediately. Focus on creating consistently and bringing the right people together. The business model will become clear once you've built something people would actually miss.",
+    selfEmployed: "Your content brings people in; your community keeps them. Make sure your content is actively driving people toward the community, and that the community is making your content better. The two are one engine—design them that way.",
+    inBetween:    "Create content that attracts your kind of people, and then create a space for them to gather. The combination of audience and community is one of the most valuable assets you can build during a transition.",
+  },
+  "CREATOR:STABILIZER": {
+    employed:     "Your salary is the most underrated tool you have as a creator. It means you can publish without panic, experiment without desperation, and find your voice without needing every post to perform. Consistency is the whole game, and stability is what makes consistency possible.",
+    selfEmployed: "You're building an audience alongside existing income streams, which gives you more patience than creators who need to monetize immediately. The audience you build becomes an asset that outlasts any individual client relationship. Keep building it, even when client work gets busy.",
+    inBetween:    "Start creating now—before you feel ready, before you know exactly where it's going. The platform you build over the next 90 days will be an asset regardless of what comes next in your career.",
+  },
+  "CREATOR:EXPERT": {
+    employed:     "Use your employment as the runway to create consistently and develop the advisory relationships that will eventually replace it. Your content and your advisory practice are the same pitch: here's what I know and here's how I can help you with it directly.",
+    selfEmployed: "What you publish attracts the clients who need you; the clients you work with deepen what you publish. Make sure your content is always pointing to how people can work with you more directly—the advisory offer should be one step from the content.",
+    inBetween:    "Use this transition to build a public body of work that establishes what you know, and reach out directly to potential advisory clients in parallel. The two work together faster than you'd expect—and both are things you can start today.",
+  },
+  "CREATOR:EDUCATOR": {
+    employed:     "Build your content habit first, then let the audience it generates give you beta students for your first program. Your day job funds the experimentation. The content and the teaching build on each other—don't wait for one to be ready before starting the other.",
+    selfEmployed: "Your content is your top of funnel and your programs are your offer. Keep building both—the content should consistently drive people toward the teaching, and the teaching should generate more things worth saying. They're one flywheel, not two separate efforts.",
+    inBetween:    "You have the rare combination of time and clarity right now. Build your content library and design your first program simultaneously. The content will attract your first students; the program will give you more to say. Start before either feels finished.",
+  },
+  "CREATOR:CONNECTOR": {
+    employed:     "Your job means neither the content nor the community has to generate income right away. Focus on creating consistently and bringing the right people together.",
+    selfEmployed: "Your content brings people in; your community is what makes them stay. Make sure your content is driving people somewhere—not just accumulating views—and that your community is giving you more to create about. The two are deeply connected.",
+    inBetween:    "Create content that attracts your kind of people, and then create a space for them to find each other. You have an audience—now it's time to turn them into a community.",
+  },
+};
+
+const PIE_COLORS = {
+  STABILIZER: "#3b9db6",
+  EXPERT:     "#573b30",
+  EDUCATOR:   "#cdd492",
+  CONNECTOR:  "#e8a87c",
+  CREATOR:    "#9b8bb5",
+};
+
+function PieChart({ scores }) {
+  const cx = 90, cy = 90, r = 85;
+  const total = Object.values(scores).reduce((s, v) => s + v, 0) || 1;
+  const slices = Object.keys(TYPES).map(key => ({
+    key,
+    label: TYPES[key].label,
+    pct: scores[key] / total,
+    color: PIE_COLORS[key],
+  }));
+
+  let angle = -Math.PI / 2;
+  const paths = slices.map(slice => {
+    if (slice.pct === 0) return null;
+    const start = angle;
+    const sweep = slice.pct * 2 * Math.PI;
+    angle += sweep;
+    const end = angle;
+    const x1 = cx + r * Math.cos(start);
+    const y1 = cy + r * Math.sin(start);
+    const x2 = cx + r * Math.cos(end);
+    const y2 = cy + r * Math.sin(end);
+    const large = sweep > Math.PI ? 1 : 0;
+    return (
+      <path key={slice.key} d={`M${cx},${cy} L${x1},${y1} A${r},${r} 0 ${large} 1 ${x2},${y2} Z`} fill={slice.color} />
+    );
+  });
+
+  return (
+    <div style={{ margin: "24px 0 8px" }}>
+      <div style={{ fontFamily: SANS, fontSize: "10px", fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: BLUE, marginBottom: "16px" }}>
+        Your archetype breakdown
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "28px", flexWrap: "wrap" }}>
+        <svg width="180" height="180" viewBox="0 0 180 180" style={{ flexShrink: 0 }}>
+          {paths}
+        </svg>
+        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+          {slices.map(slice => (
+            <div key={slice.key} style={{ display: "flex", alignItems: "center", gap: "10px", fontFamily: SANS, fontSize: "13px", color: TEXT }}>
+              <div style={{ width: "12px", height: "12px", borderRadius: "3px", background: slice.color, flexShrink: 0 }} />
+              <span style={{ fontWeight: 400 }}>{slice.label}</span>
+              <span style={{ fontWeight: 600, marginLeft: "auto", paddingLeft: "12px" }}>{Math.round(slice.pct * 100)}%</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 // ─── Styles ───────────────────────────────────────────────────────────────────
@@ -1025,9 +1188,14 @@ function Gate({ typeKey, result, answers, onReveal }) {
   );
 }
 
-function Result({ result, firstName, onRetake, onExplore }) {
+function Result({ result, firstName, q2Answer, onRetake, onExplore }) {
   const t = TYPES[result.primary];
   const s = TYPES[result.secondary];
+  const situation = [0,1].includes(q2Answer) ? "employed"
+    : [2,3].includes(q2Answer) ? "selfEmployed"
+    : q2Answer === 4 ? "inBetween"
+    : "employed";
+  const blendText = BLENDS[`${result.primary}:${result.secondary}`]?.[situation] ?? "";
   const [pdfLoading, setPdfLoading] = useState(false);
   const name = (firstName || "").trim();
   const greeting = name ? `${name}, here's the thing about ${t.label}s.` : `Here's the thing about ${t.label}s.`;
@@ -1071,10 +1239,12 @@ function Result({ result, firstName, onRetake, onExplore }) {
         Your primary archetype is <strong style={{ fontWeight: 500, color: t.color }}>{t.label}</strong>
         {" "}with your secondary archetype as{" "}
         <button onClick={onExplore} style={{ fontWeight: 500, color: s.color, background: "none", border: "none", padding: 0, cursor: "pointer", fontFamily: "inherit", fontSize: "inherit", textDecoration: "underline" }}>{s.label}</button>.
-        {" "}When the two pull in different directions, lead with your {t.label} instincts.
+        {blendText && <><br /><br />{blendText}</>}
       </div>
 
       <p style={{ ...S.bodyText, fontStyle: "italic", margin: "20px 0 0" }}>{t.recognition}</p>
+
+      <PieChart scores={result.scores} />
 
       <div style={S.divider(t.color)} />
 
@@ -1352,7 +1522,7 @@ export default function App() {
           />
         )}
         {screen === "gate" && <Gate typeKey={result.primary} result={result} answers={answers} onReveal={handleReveal} />}
-        {screen === "result" && <Result result={result} firstName={firstName} onRetake={handleRetake} onExplore={() => setScreen("explore")} />}
+        {screen === "result" && <Result result={result} firstName={firstName} q2Answer={answers[1]} onRetake={handleRetake} onExplore={() => setScreen("explore")} />}
         {screen === "explore" && <Explore result={result} onBack={() => setScreen("result")} />}
       </div>
     </>
