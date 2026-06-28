@@ -1264,7 +1264,7 @@ function Result({ result, firstName, q2Answer, onRetake, onExplore }) {
       <p style={S.bodyText}>{t.description}</p>
 
       <div style={S.sectionHead}>This fits if...</div>
-      <p style={{ ...S.bodyText, fontStyle: "italic" }}>{t.forYou}</p>
+      <p style={S.bodyText}>{t.forYou}</p>
 
       {/* Energizes / Drains */}
       <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginBottom: "8px" }}>
@@ -1303,7 +1303,7 @@ function Result({ result, firstName, q2Answer, onRetake, onExplore }) {
       </div>
 
       <div style={S.sectionHead}>Why you've held back</div>
-      <p style={{ ...S.bodyText, fontStyle: "italic" }}>{t.whyHeldBack}</p>
+      <p style={S.bodyText}>{t.whyHeldBack}</p>
 
       <div style={S.sectionHead}>Your next step</div>
       <div style={S.nextStep(t.color)}>{t.nextStep}</div>
